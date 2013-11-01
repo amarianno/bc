@@ -1,0 +1,267 @@
+/*
+Theme Name: Bom Caminho
+Theme URI: http://www.bomcaminho.com.br
+Author: Michael Felix Dias
+*/
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #4A4B4C;
+    font: normal 14px Tahoma, Arial, Verdana, Sans-Serif;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: normal;
+    margin: 0 0 15px 0;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+h4 {
+    color: #80CAEC;
+    font: 16px Tahoma, Arial, Verdana, Sans-Serif;
+}
+
+p {
+    margin: 0 0 30px 0;
+}
+
+address {
+    font-style: normal;
+}
+
+ol, ul { margin-bottom: 35px; }
+ul li { margin: 0 0 10px 17px; }
+ol li { margin: 0 0 10px 30px; }
+ul { list-style: square; }
+
+.background_1 { background: url("imagens/background_1.jpg") repeat; }
+.background_2 { background: url("imagens/background_2.jpg") repeat; }
+.background_3 { background: url("imagens/background_3.jpg") repeat; }
+.background_4 { background: url("imagens/background_4.jpg") repeat; }
+
+.border { border-top: 5px solid #80CBEC; }
+
+.geral {
+    margin: 0 auto;
+    width: 960px;
+}
+
+.logo_cabecalho {
+    float: left;
+    height: 106px;
+    margin: 25px 0 0 0;
+    width: 159px;
+}
+
+.logo_cabecalho span { display: none; }
+
+.logo_rodape {
+    float: left;
+    height: 95px;
+    width: 141px;
+}
+
+.logo_rodape span { display: none; }
+
+.menu { float: right; list-style: none; }
+
+.menu li {
+    float: left;
+    margin: 0 0 0 10px;
+}
+
+.menu li a {
+    border-color: transparent;
+    border-style: solid;
+    border-width: 70px 0 3px 0;
+    color: #4A4B4C;
+    display: block;
+    font-size: 14px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.menu li a:active {
+    background: none;
+}
+
+.quem_somos,  #quem_somos:hover  { border-color: #80CBEC; }
+.estrutura,   #estrutura:hover   { border-color: #CC3333; }
+.projetos,    #projetos:hover    { border-color: #CCFF00; }
+.noticias,    #noticias:hover    { border-color: #CC3399; }
+.eventos,     #eventos:hover     { border-color: #FFCC00; }
+.galeria,     #galeria:hover     { border-color: #FF6699; }
+.voluntario,  #voluntario:hover  { border-color: #6633CC; }
+.colaborador, #colaborador:hover { border-color: #009900; }
+.contato,     #contato:hover     { border-color: #CC9966; }
+
+.banner {
+    margin: 25px 0 35px -20px;
+    width: 1000px;
+    clear: both;
+}
+
+.caixa {
+    background: #f5f5f5;
+    border-top: 5px solid #ccc;
+    -webkit-box-shadow: 0px 0px 40px 0px #bbb;
+    -moz-box-shadow: 0px 0px 40px 0px #bbb;
+    box-shadow: 0px 0px 40px 0px #bbb;
+    margin: 0 0 0 -20px;
+    padding: 20px 20px 0 20px;
+    width: 960px;
+}
+
+.noticia {
+    color: #919191;
+    font-family: Tahoma, Arial, Verdana, Sans-Serif;
+    padding: 0 0 20px 0;
+}
+
+.noticia h4, .noticia h4 a {
+    color: #80CAEC;
+    margin: 5px 0;
+    text-decoration: none;
+}
+
+.noticia p, .noticia p a {
+    color: #4A4B4C;
+    font-size: 14px;
+    margin: 0;
+    text-decoration: none;
+}
+
+.noticia p a:hover {
+    text-decoration: underline;
+}
+
+.autor {
+    font-weight: bold;
+}
+
+#rodape {
+    background: #21A4DC;
+    border-top: 5px solid #ccc;
+    height: 100px;
+    margin: 120px 0 0 0;
+    padding: 25px 0;
+}
+
+#rodape h5 {
+    color: #fff;
+    font: normal 20px Tahoma, Arial, Verdana, Sans-Serif;
+    margin: 5px 0 10px 0;
+}
+
+#rodape .dados {
+    color: #333;
+    float: right;
+    font: normal 13px Tahoma, Arial, Verdana, Sans-Serif;
+    text-align: right;
+}
+
+#rodape .dados address, #rodape .dados .email {
+    margin: 0 0 5px 0;
+    display: block;
+}
+
+.link {
+    color: #4A4B4C;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+form.form01 {
+    width: 350px;
+    margin: 20px 0 0 0;
+}
+
+form.form01 label {
+    display: block;
+    margin: 10px 0 0 0;
+}
+
+form.form01 div.input-wrap {
+    background: #f5f5f5;
+    padding: 5px;
+    border: 1px solid #21A4DC;
+}
+
+form.form01 input[type=text] {
+    width: 100%;
+    background: transparent;
+    padding: 5px 0;
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+    color: #21A4DC;
+}
+
+form.form01 input[type=image] {
+    margin: 20px 0 0 0;
+}
+
+form.form01 label.erro div.input-wrap {
+    border : 1px solid #B31313;
+}
+
+form.form01 label span.msg-erro {
+    display: none;
+}
+
+form.form01 label.erro span.msg-erro {
+    font-size: 12px;
+    display: block;
+    background: #B31313;
+    padding: 3px;
+    color: #fff;
+}
+
+form.form01 label textarea {
+    width: 100%;
+    max-width: 100%;
+    height: 100px;
+    min-height: 100px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: #21A4DC;
+    font: normal 14px Tahoma, Arial, Verdana, sans-serif;
+    overflow-y: auto; 
+}
+
+.progresso {
+    margin-top: 10px;
+    visibility: hidden;
+}
+
+.ajax-result {
+    font-size: 20px;
+    text-align: center;
+    padding: 30px 30px 70px 30px;
+    margin: 25px 0 0 0;
+}
+
+.sucess {
+    background: #92CA1E;
+    color: #333;
+}
+
+.error {
+    background: #B31313;
+    color: #ccc;
+}
