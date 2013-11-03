@@ -5,6 +5,15 @@ jQuery(function($){
     if($("#txtCPF").size() > 0) {
         $("#txtCPF").mask("999.999.999-99");
     }
+    if($("#txtCep").size() > 0) {
+        $("#txtCep").mask("99.999-999");
+    }
+    if($("#txtTel1").size() > 0) {
+        $("#txtTel1").mask("(99)99999-9999");
+    }
+    if($("#txtTel2").size() > 0) {
+        $("#txtTel2").mask("(99)99999-9999");
+    }
 });
 
 
