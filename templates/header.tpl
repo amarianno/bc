@@ -24,6 +24,7 @@
     <script src="include/js/jquery-1.9.1.js"></script>
     <script src="include/js/jquery-ui.js"></script>
     <script type="text/javascript" src="include/js/superfish/superfish.js"></script>
+    <script language="javascript" src="include/js/site/bomcaminho.js" type="text/javascript"></script>
     <script language="javascript" src="include/js/site/loader_ajax.js" type="text/javascript"></script>
     <script language="javascript" src="include/js/jquery/jquery.maskedinput.js" type="text/javascript"></script>
 

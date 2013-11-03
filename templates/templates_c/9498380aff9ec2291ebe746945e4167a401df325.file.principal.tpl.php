@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-01 14:12:25
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-02 23:50:09
          compiled from "templates/principal.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:183143587251800215cdbeb6-97691475%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9498380aff9ec2291ebe746945e4167a401df325' => 
     array (
       0 => 'templates/principal.tpl',
-      1 => 1383322342,
+      1 => 1383442880,
       2 => 'file',
     ),
   ),
@@ -37,12 +37,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <td>
                 <div id="tabs">
                     <ul>
-                        <li><a href="#tabs-1">Tutuzinha</a></li>
-                        <li><a href="#tabs-2">Guilherme</a></li>
-                        <li><a href="#tabs-3">Dona Lourdinha</a></li>
+                        <li><a href="#tabs-1">Dados Pessoais</a></li>
+                        <li><a href="#tabs-2">Dados Residênciais</a></li>
+                        <li><a href="#tabs-3">UBS</a></li>
                     </ul>
                     <div id="tabs-1">
-                        <p>A tutu é gostosa e tem um tutu enorme. Agora ela é uma roteirista de sucesso e logo vai pra disney</p>
+                        <p><?php echo $_smarty_tpl->getSubTemplate ("dados_pessoais.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+</p>
                     </div>
                     <div id="tabs-2">
                         <p>Esse moleque eu amo mas é muito danado e ri da minha cara as vezes</p>
