@@ -80,9 +80,33 @@ function addComposicaoFamiliar() {
     campos += "&txtDeficiencia=" + $("#txtDeficiencia").val();
     campos += "&txtVicio=" + $("#txtVicio").val();
     campos += "&txtAtendMedicEspec=" + $("#txtAtendMedicEspec").val();
+    campos += "&operacao=inserir";
 
-    alert(campos);
+    var elemento = document.getElementById('dados_composicao_familiar');
+    $.ajax({
+        type: "POST",
+        url: 'addComposicaoFamiliar.php',
+        data: campos,
+        success: function (data) {
+            elemento.innerHTML = data;
+            $("#txtCompFamiliar").val('');
+            document.getElementById('selGrauParenstescoAcompFamiliar').value = 1;
+            $("#txtEscola").val('');
+            $("#txtDtNascimentoCompFamiliar").val('');
+            $("#txtTrabalha").val('');
+            $("#txtRenda").val('');
+            $("#txtRGAcompFamiliar").val('');
+            $("#txtGrupoCasa").val('');
+            document.getElementById('selGestante').value = 'N';
+            $("#txtDeficiencia").val('');
+            $("#txtVicio").val('');
+            $("#txtAtendMedicEspec").val('');
+        }
+    });
+}
 
+function mostrarGrid() {
+    var campos =  "operacao=consultar";
     var elemento = document.getElementById('dados_composicao_familiar');
     $.ajax({
         type: "POST",

@@ -100,7 +100,7 @@
             Atendimento Médico Especializado
         </td>
         <td>
-            <input id="txtAtendMedicEspec" name="txtAtendMedicEspec" type="text" tabindex="10" />
+            <input id="txtAtendMedicEspec" name="txtAtendMedicEspec" type="text" tabindex="12" />
         </td>
     </tr>
     <tr>
@@ -112,5 +112,8 @@
         </td>
     </tr>
 </table>
-
+<br>
 <div id="dados_composicao_familiar"></div>
+<script>
+    mostrarGrid();
+</script>

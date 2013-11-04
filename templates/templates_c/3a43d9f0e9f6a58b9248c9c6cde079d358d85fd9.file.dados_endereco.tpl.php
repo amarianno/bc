@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-04 08:27:05
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-04 13:53:21
          compiled from "templates/dados_endereco.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:93627068652769301550e83-91648250%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3a43d9f0e9f6a58b9248c9c6cde079d358d85fd9' => 
     array (
       0 => 'templates/dados_endereco.tpl',
-      1 => 1383560781,
+      1 => 1383580389,
       2 => 'file',
     ),
   ),
@@ -142,7 +142,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             </select>
         </td>
         <td>
-            N de Cômodos
+            Nº de Cômodos
         </td>
         <td>
             <input id="txtNumComodos" name="txtNumComodos" type="text" tabindex="13" />

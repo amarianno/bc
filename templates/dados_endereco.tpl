@@ -121,7 +121,7 @@
             </select>
         </td>
         <td>
-            N de Cômodos
+            Nº de Cômodos
         </td>
         <td>
             <input id="txtNumComodos" name="txtNumComodos" type="text" tabindex="13" />

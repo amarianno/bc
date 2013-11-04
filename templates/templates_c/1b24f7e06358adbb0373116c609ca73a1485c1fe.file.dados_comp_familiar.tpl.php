@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-04 11:22:53
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-04 14:21:43
          compiled from "templates/dados_comp_familiar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1245370595277993f5b4414-32500519%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1b24f7e06358adbb0373116c609ca73a1485c1fe' => 
     array (
       0 => 'templates/dados_comp_familiar.tpl',
-      1 => 1383571369,
+      1 => 1383582097,
       2 => 'file',
     ),
   ),
@@ -121,7 +121,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             Atendimento Médico Especializado
         </td>
         <td>
-            <input id="txtAtendMedicEspec" name="txtAtendMedicEspec" type="text" tabindex="10" />
+            <input id="txtAtendMedicEspec" name="txtAtendMedicEspec" type="text" tabindex="12" />
         </td>
     </tr>
     <tr>
@@ -133,5 +133,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </td>
     </tr>
 </table>
-
-<div id="dados_composicao_familiar"></div><?php }} ?>
+<br>
+<div id="dados_composicao_familiar"></div>
+<script>
+    mostrarGrid();
+</script><?php }} ?>

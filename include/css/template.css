@@ -897,8 +897,8 @@ img.grayscale:hover {
 }
 
 .datagrid table thead th {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #313031), color-stop(1, #1d2023));
-    background: -moz-linear-gradient(center top, #313031 5%, #1d2023 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #21A4DC), color-stop(1, #21A4DC));
+    background: -moz-linear-gradient(center top, #21A4DC 5%, #21A4DC 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#313031', endColorstr = '#1d2023');
     background-color: #1d2023;
     color: #FFFFFF;
