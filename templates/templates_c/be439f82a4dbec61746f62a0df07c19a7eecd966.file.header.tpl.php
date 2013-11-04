@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-01 14:09:36
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-02 23:25:24
          compiled from "templates/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1098805042513e393fb5ca97-81717382%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'be439f82a4dbec61746f62a0df07c19a7eecd966' => 
     array (
       0 => 'templates/header.tpl',
-      1 => 1383322170,
+      1 => 1383440892,
       2 => 'file',
     ),
   ),
@@ -50,6 +50,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <script src="include/js/jquery-1.9.1.js"></script>
     <script src="include/js/jquery-ui.js"></script>
     <script type="text/javascript" src="include/js/superfish/superfish.js"></script>
+    <script language="javascript" src="include/js/site/bomcaminho.js" type="text/javascript"></script>
     <script language="javascript" src="include/js/site/loader_ajax.js" type="text/javascript"></script>
     <script language="javascript" src="include/js/jquery/jquery.maskedinput.js" type="text/javascript"></script>
 

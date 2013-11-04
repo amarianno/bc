@@ -730,7 +730,7 @@ button.ui-button::-moz-focus-inner {
 	background-position: -65px -16px;
 }
 .ui-tabs {
-	position: relative;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+	position: fixed;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
 	padding: .2em;
 }
 .ui-tabs .ui-tabs-nav {
@@ -798,6 +798,8 @@ body .ui-tooltip {
 .ui-widget button {
 	font-family: Verdana,Arial,sans-serif;
 	font-size: 1em;
+    background: #fcefa1;
+    width: 250px;
 }
 .ui-widget-content {
 	border: 1px solid #aaaaaa;

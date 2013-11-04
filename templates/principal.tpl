@@ -16,19 +16,23 @@
             <td>
                 <div id="tabs">
                     <ul>
-                        <li><a href="#tabs-1">Tutuzinha</a></li>
-                        <li><a href="#tabs-2">Guilherme</a></li>
-                        <li><a href="#tabs-3">Dona Lourdinha</a></li>
+                        <li><a href="#tabs-1">Dados Pessoais</a></li>
+                        <li><a href="#tabs-2">Dados Residênciais</a></li>
+                        <li><a href="#tabs-3">Dados Familiares</a></li>
+                        <li><a href="#tabs-4">Composição Familiar</a></li>
                     </ul>
                     <div id="tabs-1">
-                        <p>A tutu é gostosa e tem um tutu enorme. Agora ela é uma roteirista de sucesso e logo vai pra disney</p>
+                        <p>{include file="dados_pessoais.tpl"}</p>
                     </div>
                     <div id="tabs-2">
-                        <p>Esse moleque eu amo mas é muito danado e ri da minha cara as vezes</p>
+                        <p>{include file="dados_endereco.tpl"}</p>
                     </div>
                     <div id="tabs-3">
                         <p>Cuidado com a Lingua dela.</p>
                         <p>Muuuuuuuuuuito cuidado com a lingua dela.</p>
+                    </div>
+                    <div id="tabs-4">
+                        <p>Composição Familiar</p>
                     </div>
                 </div>
             </td>
