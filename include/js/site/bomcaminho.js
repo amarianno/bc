@@ -30,12 +30,19 @@ function dadosTrabalho() {
         document.getElementById('selTipoTrabalho').value = 'R';
         $("#profissao").html('<span id="profissao"> Profissão </span>');
     }
-
-
 }
 //************************* DADOS PESSOAIS ******************************************
+//************************* DADOS ENDERECO ******************************************
+function isCesta() {
 
-
+    if(document.getElementById('selOutrasRenda').value == '4') {
+       $('#txtDeOnde').attr('disabled', false);
+    } else {
+       $('#txtDeOnde').val('');
+       $('#txtDeOnde').attr('disabled', true);
+    }
+}
+//************************* DADOS ENDERECO ******************************************
 
 
 function numdias(mes,ano) {

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-03 19:42:12
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-03 19:54:25
          compiled from "templates/dados_endereco.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:93627068652769301550e83-91648250%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3a43d9f0e9f6a58b9248c9c6cde079d358d85fd9' => 
     array (
       0 => 'templates/dados_endereco.tpl',
-      1 => 1383514873,
+      1 => 1383515479,
       2 => 'file',
     ),
   ),
@@ -178,7 +178,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             Outras Rendas
         </td>
         <td>
-            <select id="selOutrasRenda" name="selOutrasRenda" tabindex="15" style="width: 250px;">
+            <select id="selOutrasRenda" name="selOutrasRenda" tabindex="15" style="width: 250px;" onchange="isCesta()">
                 <option value="1" selected="selected">
                     Nenhuma
                 </option>
@@ -199,7 +199,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             De onde?
         </td>
         <td>
-            <input id="txtDeOnde" name="txtDeOnde" type="text" tabindex="16" />
+            <input id="txtDeOnde" name="txtDeOnde" type="text" tabindex="16" disabled="true" />
         </td>
         <td>
             Possui Veículo?

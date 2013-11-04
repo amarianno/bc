@@ -118,12 +118,6 @@
                 <option value="3">
                     Oferece Risco
                 </option>
-                <option value="4">
-                    Aluguel Social
-                </option>
-                <option value="5">
-                    Morador de rua
-                </option>
             </select>
         </td>
         <td>
@@ -157,7 +151,7 @@
             Outras Rendas
         </td>
         <td>
-            <select id="selOutrasRenda" name="selOutrasRenda" tabindex="15" style="width: 250px;">
+            <select id="selOutrasRenda" name="selOutrasRenda" tabindex="15" style="width: 250px;" onchange="isCesta()">
                 <option value="1" selected="selected">
                     Nenhuma
                 </option>
@@ -178,7 +172,7 @@
             De onde?
         </td>
         <td>
-            <input id="txtDeOnde" name="txtDeOnde" type="text" tabindex="16" />
+            <input id="txtDeOnde" name="txtDeOnde" type="text" tabindex="16" disabled="true" />
         </td>
         <td>
             Possui Veículo?
@@ -194,25 +188,25 @@
                 <option value="3">
                     Palio
                 </option>
-                <option value="3">
+                <option value="4">
                     Celta
                 </option>
-                <option value="3">
+                <option value="5">
                     Meriva
                 </option>
-                <option value="3">
+                <option value="6">
                     Camaro
                 </option>
-                <option value="3">
+                <option value="7">
                     Golf
                 </option>
-                <option value="3">
+                <option value="8">
                     Gol
                 </option>
-                <option value="3">
+                <option value="9">
                     Fiat Uno
                 </option>
-                <option value="3">
+                <option value="10">
                     Ford Ecosport
                 </option>
             </select>
