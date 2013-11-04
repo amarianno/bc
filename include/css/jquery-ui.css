@@ -799,7 +799,7 @@ body .ui-tooltip {
 	font-family: Verdana,Arial,sans-serif;
 	font-size: 1em;
     background: #fcefa1;
-    width: 250px;
+    width: 100%;
 }
 .ui-widget-content {
 	border: 1px solid #aaaaaa;

@@ -118,6 +118,36 @@ function mostrarGrid() {
     });
 }
 
+function detalharCompFam(codigo) {
+    var campos =  "operacao=detalhar";
+    campos +=  "&codigo=" + codigo;
+    alert(campos);
+
+    $.ajax({
+        type: "POST",
+        url: 'addComposicaoFamiliar.php',
+        data: campos,
+        success: function (data) {
+            alert(data);
+            var composicaoFamiliar = jQuery.parseJSON ( data );
+            alert(composicaoFamiliar);
+            alert(composicaoFamiliar.nome);
+            $("#txtCompFamiliar").val(composicaoFamiliar.nome);
+            document.getElementById('selGrauParenstescoAcompFamiliar').value = composicaoFamiliar.grauParentesco;
+            $("#txtEscola").val(composicaoFamiliar.escola);
+            $("#txtDtNascimentoCompFamiliar").val(composicaoFamiliar.dataNascimento);
+            $("#txtTrabalha").val(composicaoFamiliar.trabalho);
+            $("#txtRenda").val(composicaoFamiliar.renda);
+            $("#txtRGAcompFamiliar").val(composicaoFamiliar.rg);
+            $("#txtGrupoCasa").val(composicaoFamiliar.grupoCasa);
+            document.getElementById('selGestante').value = composicaoFamiliar.gestante;
+            $("#txtDeficiencia").val(composicaoFamiliar.deficiencia);
+            $("#txtVicio").val(composicaoFamiliar.vicio);
+            $("#txtAtendMedicEspec").val(composicaoFamiliar.atendimentoMedicoEspecializado);
+        }
+    });
+}
+
 //************************* DADOS COMPOSICAO FAMILIAR ******************************************
 
 

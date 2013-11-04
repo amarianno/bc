@@ -26,12 +26,15 @@ function imprimirGridSessao($composicaoFamiliar) {
     $htmlRetorno .= "<thead>";
     $htmlRetorno .= "   <tr>";
     $htmlRetorno .= "       <th></th>";
+    $htmlRetorno .= "       <th></th>";
     $htmlRetorno .= "       <th>Nome</th>";
     $htmlRetorno .= "       <th>Grau Parentêsco</th>";
+    $htmlRetorno .= "       <th>RG</th>";
     $htmlRetorno .= "       <th>Escola</th>";
     $htmlRetorno .= "       <th>Data de Nascimento</th>";
     $htmlRetorno .= "       <th>Trabalho</th>";
     $htmlRetorno .= "       <th>Grupo na Casa</th>";
+    $htmlRetorno .= "       <th></th>";
     $htmlRetorno .= "   </tr>";
     $htmlRetorno .= "</thead>";
     $htmlRetorno .= "<tbody>";
@@ -42,13 +45,20 @@ function imprimirGridSessao($composicaoFamiliar) {
             //$compFamiliar = new ComposicaoFamiliar();
             $classe = ($cor = !$cor) ? 'normal' : 'alt';
             $htmlRetorno .= "<tr class='" . $classe . "'>";
+            $htmlRetorno .= "   <td>" . "<img src='include/img/search-submit.png' onclick='detalharCompFam(".$compFamiliar->codigo.")' />" . "</td>";
             $htmlRetorno .= "   <td>" . $compFamiliar->codigo . "º</td>";
             $htmlRetorno .= "   <td>" . $compFamiliar->nome . "</td>";
             $htmlRetorno .= "   <td>" . retornaGrauParentesco($compFamiliar->grauParentesco) . "</td>";
+            $htmlRetorno .= "   <td>" . $compFamiliar->rg . "</td>";
             $htmlRetorno .= "   <td>" . $compFamiliar->escola . "</td>";
             $htmlRetorno .= "   <td>" . $compFamiliar->dataNascimento . "</td>";
-            $htmlRetorno .= "   <td>" . $compFamiliar->trabalho . "</td>";
+            if($compFamiliar->trabalho != '') {
+                $htmlRetorno .= "   <td>" . $compFamiliar->trabalho . "(R$". $compFamiliar->renda .")</td>";
+            } else {
+                $htmlRetorno .= "   <td></td>";
+            }
             $htmlRetorno .= "   <td>" . $compFamiliar->grupoCasa . "</td>";
+            $htmlRetorno .= "   <td>" . "<a href='#'><img src='include/img/icon/delete-icon.png' onclick='excluirCompFam(".$compFamiliar->codigo.")'  /></a>" . "</td>";
             $htmlRetorno .= '</tr>';
 
 
@@ -67,7 +77,19 @@ function imprimirGridSessao($composicaoFamiliar) {
 
 $op = $_POST['operacao'];
 
-if($op == 'inserir') {
+if ($op == 'detalhar') {
+
+    $codigo = $_POST['codigo'];
+
+    $arrayCompFamiliar = $_SESSION[Constantes::COMP_FAMILIAR];
+
+    foreach ($arrayCompFamiliar as $compFamiliar) {
+        if($codigo == $compFamiliar->codigo) {
+            return json_encode($arrayCompFamiliar[0]);
+        }
+    }
+
+} else if($op == 'inserir') {
     $composicaoFamiliar = new ComposicaoFamiliar();
 
     $composicaoFamiliar->nome = $_POST['txtCompFamiliar'];
