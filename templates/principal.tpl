@@ -20,6 +20,7 @@
                         <li><a href="#tabs-2">Dados Residênciais</a></li>
                         <li><a href="#tabs-3">Dados Familiares</a></li>
                         <li><a href="#tabs-4">Composição Familiar</a></li>
+                        <li><a href="#tabs-5">Assistência</a></li>
                     </ul>
                     <div id="tabs-1">
                         <p>{include file="dados_pessoais.tpl"}</p>
@@ -28,11 +29,13 @@
                         <p>{include file="dados_endereco.tpl"}</p>
                     </div>
                     <div id="tabs-3">
-                        <p>Cuidado com a Lingua dela.</p>
-                        <p>Muuuuuuuuuuito cuidado com a lingua dela.</p>
+                        <p>{include file="dados_familiares.tpl"}</p>
                     </div>
                     <div id="tabs-4">
-                        <p>Composição Familiar</p>
+                        <p>{include file="dados_comp_familiar.tpl"}</p>
+                    </div>
+                    <div id="tabs-5">
+                        <p>Assistência</p>
                     </div>
                 </div>
             </td>

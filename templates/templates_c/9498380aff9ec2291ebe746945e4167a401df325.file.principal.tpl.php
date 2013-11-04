@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-03 19:38:08
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-04 10:55:27
          compiled from "templates/principal.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:183143587251800215cdbeb6-97691475%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9498380aff9ec2291ebe746945e4167a401df325' => 
     array (
       0 => 'templates/principal.tpl',
-      1 => 1383514576,
+      1 => 1383568444,
       2 => 'file',
     ),
   ),
@@ -41,6 +41,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         <li><a href="#tabs-2">Dados Residênciais</a></li>
                         <li><a href="#tabs-3">Dados Familiares</a></li>
                         <li><a href="#tabs-4">Composição Familiar</a></li>
+                        <li><a href="#tabs-5">Assistência</a></li>
                     </ul>
                     <div id="tabs-1">
                         <p><?php echo $_smarty_tpl->getSubTemplate ("dados_pessoais.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
@@ -51,11 +52,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </p>
                     </div>
                     <div id="tabs-3">
-                        <p>Cuidado com a Lingua dela.</p>
-                        <p>Muuuuuuuuuuito cuidado com a lingua dela.</p>
+                        <p><?php echo $_smarty_tpl->getSubTemplate ("dados_familiares.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+</p>
                     </div>
                     <div id="tabs-4">
-                        <p>Composição Familiar</p>
+                        <p><?php echo $_smarty_tpl->getSubTemplate ("dados_comp_familiar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+</p>
+                    </div>
+                    <div id="tabs-5">
+                        <p>Assistência</p>
                     </div>
                 </div>
             </td>

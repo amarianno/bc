@@ -15,4 +15,5 @@ final class Constantes {
     const TABELA_PARSERS_USER = "usersbc_parsers";
     const TABELA_HISTORICO = "historico";
     const PWD = "pwd";
+    const COMP_FAMILIAR = 'composicao_familiar';
 }

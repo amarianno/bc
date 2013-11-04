@@ -14,6 +14,10 @@ jQuery(function($){
     if($("#txtTel2").size() > 0) {
         $("#txtTel2").mask("(99)99999-9999");
     }
+    if($("#txtDtNascimentoCompFamiliar").size() > 0) {
+        $("#txtDtNascimentoCompFamiliar").mask("99/99/9999");
+    }
+
 });
 
 
@@ -43,6 +47,54 @@ function isCesta() {
     }
 }
 //************************* DADOS ENDERECO ******************************************
+//************************* DADOS FAMILIARES ******************************************
+function semFilhos() {
+
+    if(document.getElementById('selQtdeFilhos').value == '0') {
+        document.getElementById('selTodosUnicoPai').value = '';
+        $('#txtNomePai1').val('');
+        $('#txtNomePai1').attr('disabled', true);
+        $('#txtNomePai2').val('');
+        $('#txtNomePai2').attr('disabled', true);
+    } else {
+        $('#txtNomePai1').attr('disabled', false);
+        $('#txtNomePai2').attr('disabled', false);
+    }
+
+}
+//************************* DADOS FAMILIARES ******************************************
+//************************* DADOS COMPOSICAO FAMILIAR ******************************************
+
+function addComposicaoFamiliar() {
+    if($("#txtCompFamiliar").val() == '') {return false;}
+
+    var campos =  "txtCompFamiliar=" + $("#txtCompFamiliar").val();
+    campos += "&selGrauParenstescoAcompFamiliar=" + document.getElementById('selGrauParenstescoAcompFamiliar').value;
+    campos += "&txtEscola=" + $("#txtEscola").val();
+    campos += "&txtDtNascimentoCompFamiliar=" + $("#txtDtNascimentoCompFamiliar").val();
+    campos += "&txtTrabalha=" + $("#txtTrabalha").val();
+    campos += "&txtRenda=" + $("#txtRenda").val();
+    campos += "&txtRGAcompFamiliar=" + $("#txtRGAcompFamiliar").val();
+    campos += "&txtGrupoCasa=" + $("#txtGrupoCasa").val();
+    campos += "&selGestante=" + document.getElementById('selGestante').value;
+    campos += "&txtDeficiencia=" + $("#txtDeficiencia").val();
+    campos += "&txtVicio=" + $("#txtVicio").val();
+    campos += "&txtAtendMedicEspec=" + $("#txtAtendMedicEspec").val();
+
+    alert(campos);
+
+    var elemento = document.getElementById('dados_composicao_familiar');
+    $.ajax({
+        type: "POST",
+        url: 'addComposicaoFamiliar.php',
+        data: campos,
+        success: function (data) {
+            elemento.innerHTML = data;
+        }
+    });
+}
+
+//************************* DADOS COMPOSICAO FAMILIAR ******************************************
 
 
 function numdias(mes,ano) {

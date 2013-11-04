@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-03 19:54:25
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-04 08:27:05
          compiled from "templates/dados_endereco.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:93627068652769301550e83-91648250%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3a43d9f0e9f6a58b9248c9c6cde079d358d85fd9' => 
     array (
       0 => 'templates/dados_endereco.tpl',
-      1 => 1383515479,
+      1 => 1383560781,
       2 => 'file',
     ),
   ),
@@ -139,12 +139,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <option value="3">
                     Oferece Risco
                 </option>
-                <option value="4">
-                    Aluguel Social
-                </option>
-                <option value="5">
-                    Morador de rua
-                </option>
             </select>
         </td>
         <td>
@@ -215,25 +209,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <option value="3">
                     Palio
                 </option>
-                <option value="3">
+                <option value="4">
                     Celta
                 </option>
-                <option value="3">
+                <option value="5">
                     Meriva
                 </option>
-                <option value="3">
+                <option value="6">
                     Camaro
                 </option>
-                <option value="3">
+                <option value="7">
                     Golf
                 </option>
-                <option value="3">
+                <option value="8">
                     Gol
                 </option>
-                <option value="3">
+                <option value="9">
                     Fiat Uno
                 </option>
-                <option value="3">
+                <option value="10">
                     Ford Ecosport
                 </option>
             </select>
