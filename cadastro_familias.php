@@ -87,10 +87,10 @@ $camposValores['comentario'] = $_POST['txtComentario'];
 
 $camposValores['composicao_familiar'] = $camposValoresCompFamiliar;
 
-//$familiaBC->incluir($_SESSION[BANCO_SESSAO], $camposValores);
 /*foreach ($camposValoresCompFamiliar as $compFamiliar) {
     $composicaoFamiliarBC->incluir($_SESSION[BANCO_SESSAO], $compFamiliar);
 }*/
+//$familiaBC->incluir($_SESSION[BANCO_SESSAO], $camposValores);
 
 print_r($camposValores);
 ?>
