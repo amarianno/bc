@@ -268,7 +268,7 @@
             Tem problema em frequentar casa espírita?
         </td>
         <td colspan="2">
-            <input id="txtProblemaEspirita" name="txtProblemaEspirita" type="text" tabindex="1" style="width: 410px"/>
+            <input id="txtProblemaEspirita" name="txtProblemaEspirita" type="text" tabindex="14" style="width: 410px"/>
         </td>
     </tr>
 </table>

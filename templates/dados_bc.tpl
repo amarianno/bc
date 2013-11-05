@@ -4,7 +4,7 @@
             Objetivo do Cadastro
         </td>
         <td colspan="3">
-            <input id="txtObjetivo" name="txtObjetivo" type="text" tabindex="1" disabled="true" style="width: 100%"/>
+            <input id="txtObjetivo" name="txtObjetivo" type="text" tabindex="1" style="width: 100%"/>
         </td>
     </tr>
     <tr>
@@ -50,7 +50,7 @@
             Comentários
         </td>
         <td colspan="3">
-            <textarea rows="9" cols="30" tabindex="4" ></textarea>
+            <textarea rows="9" cols="30" tabindex="4" id="txtComentario" name="txtComentario" ></textarea>
         </td>
     </tr>
     <tr>
@@ -65,7 +65,7 @@
     <tr>
         <td colspan="3">
             <br>
-            <input type="button" value="CADASTRAR FAMÍLIA" class="bt-03" style="background: #4F92A7; cursor: hand"/>
+            <input type="button" value="CADASTRAR FAMÍLIA" class="bt-03" style="background: #4F92A7; cursor: hand" onclick="cadastrar()"/>
         </td>
     </tr>
 </table>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-05 08:53:08
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-05 11:26:43
          compiled from "templates/dados_bc.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2978797445278cc69d5d7b9-27778090%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b032565103727c9904e484dbbe9eb69a37a5b160' => 
     array (
       0 => 'templates/dados_bc.tpl',
-      1 => 1383648782,
+      1 => 1383657883,
       2 => 'file',
     ),
   ),
@@ -71,7 +71,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             Comentários
         </td>
         <td colspan="3">
-            <textarea rows="9" cols="30" tabindex="4" ></textarea>
+            <textarea rows="9" cols="30" tabindex="4" id="txtComentario" name="txtComentario" ></textarea>
         </td>
     </tr>
     <tr>
@@ -86,7 +86,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <tr>
         <td colspan="3">
             <br>
-            <input type="button" value="CADASTRAR FAMÍLIA" class="bt-03" style="background: #4F92A7; cursor: hand"/>
+            <input type="button" value="CADASTRAR FAMÍLIA" class="bt-03" style="background: #4F92A7; cursor: hand" onclick="cadastrar()"/>
         </td>
     </tr>
 </table><?php }} ?>

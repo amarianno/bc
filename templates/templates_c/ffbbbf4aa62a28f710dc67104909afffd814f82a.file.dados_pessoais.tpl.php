@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-04 08:27:05
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-05 11:27:36
          compiled from "templates/dados_pessoais.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1814781932527445cd6d1eb8-38664828%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ffbbbf4aa62a28f710dc67104909afffd814f82a' => 
     array (
       0 => 'templates/dados_pessoais.tpl',
-      1 => 1383560781,
+      1 => 1383658055,
       2 => 'file',
     ),
   ),
@@ -289,7 +289,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             Tem problema em frequentar casa espírita?
         </td>
         <td colspan="2">
-            <input id="txtProblemaEspirita" name="txtProblemaEspirita" type="text" tabindex="1" style="width: 410px"/>
+            <input id="txtProblemaEspirita" name="txtProblemaEspirita" type="text" tabindex="14" style="width: 410px"/>
         </td>
     </tr>
 </table><?php }} ?>
