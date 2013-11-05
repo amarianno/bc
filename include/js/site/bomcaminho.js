@@ -64,7 +64,20 @@ function semFilhos() {
 }
 //************************* DADOS FAMILIARES ******************************************
 //************************* DADOS COMPOSICAO FAMILIAR ******************************************
-
+function limparComposicaoFamiliar() {
+    $("#txtCompFamiliar").val('');
+    document.getElementById('selGrauParenstescoAcompFamiliar').value = 1;
+    $("#txtEscola").val('');
+    $("#txtDtNascimentoCompFamiliar").val('');
+    $("#txtTrabalha").val('');
+    $("#txtRenda").val('');
+    $("#txtRGAcompFamiliar").val('');
+    $("#txtGrupoCasa").val('');
+    document.getElementById('selGestante').value = 'N';
+    $("#txtDeficiencia").val('');
+    $("#txtVicio").val('');
+    $("#txtAtendMedicEspec").val('');
+}
 function addComposicaoFamiliar() {
     if($("#txtCompFamiliar").val() == '') {return false;}
 
@@ -121,7 +134,6 @@ function mostrarGrid() {
 function detalharCompFam(codigo) {
     var campos =  "operacao=detalhar";
     campos +=  "&codigo=" + codigo;
-    alert(campos);
 
     $.ajax({
         type: "POST",
@@ -130,8 +142,6 @@ function detalharCompFam(codigo) {
         success: function (data) {
             alert(data);
             var composicaoFamiliar = jQuery.parseJSON ( data );
-            alert(composicaoFamiliar);
-            alert(composicaoFamiliar.nome);
             $("#txtCompFamiliar").val(composicaoFamiliar.nome);
             document.getElementById('selGrauParenstescoAcompFamiliar').value = composicaoFamiliar.grauParentesco;
             $("#txtEscola").val(composicaoFamiliar.escola);
@@ -144,6 +154,23 @@ function detalharCompFam(codigo) {
             $("#txtDeficiencia").val(composicaoFamiliar.deficiencia);
             $("#txtVicio").val(composicaoFamiliar.vicio);
             $("#txtAtendMedicEspec").val(composicaoFamiliar.atendimentoMedicoEspecializado);
+        }
+    });
+}
+
+function excluirCompFam(codigo) {
+    var campos =  "operacao=excluir";
+    campos +=  "&codigo=" + codigo;
+
+    var elemento = document.getElementById('dados_composicao_familiar');
+
+    $.ajax({
+        type: "POST",
+        url: 'addComposicaoFamiliar.php',
+        data: campos,
+        success: function (data) {
+            limparComposicaoFamiliar();
+            elemento.innerHTML = data;
         }
     });
 }

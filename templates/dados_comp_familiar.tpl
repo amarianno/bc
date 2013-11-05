@@ -107,8 +107,22 @@
         <td></td>
         <td></td>
         <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
         <td>
-            <input type="button" value="adicionar" class="bt-03" style="background: #4F92A7" onclick="addComposicaoFamiliar()"/>
+            <input type="button" value="Limpar Campos" class="bt-03" style="background: #4F92A7; cursor: hand" onclick="limparComposicaoFamiliar()"/>
+        </td>
+        <td>
+            <input type="button" value="adicionar" class="bt-03" style="background: #4F92A7; cursor: hand" onclick="addComposicaoFamiliar()"/>
         </td>
     </tr>
 </table>

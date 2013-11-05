@@ -58,7 +58,7 @@ function imprimirGridSessao($composicaoFamiliar) {
                 $htmlRetorno .= "   <td></td>";
             }
             $htmlRetorno .= "   <td>" . $compFamiliar->grupoCasa . "</td>";
-            $htmlRetorno .= "   <td>" . "<a href='#'><img src='include/img/icon/delete-icon.png' onclick='excluirCompFam(".$compFamiliar->codigo.")'  /></a>" . "</td>";
+            $htmlRetorno .= "   <td>" . "<img src='include/img/icon/delete-icon.png' onclick='excluirCompFam(".$compFamiliar->codigo.")'  />" . "</td>";
             $htmlRetorno .= '</tr>';
 
 
@@ -77,7 +77,27 @@ function imprimirGridSessao($composicaoFamiliar) {
 
 $op = $_POST['operacao'];
 
-if ($op == 'detalhar') {
+if ($op == 'excluir') {
+
+    $codigo = $_POST['codigo'];
+
+    $arrayCompFamiliar = $_SESSION[Constantes::COMP_FAMILIAR];
+    $novoArray = array();
+    $posicao = 0;
+
+    for($i = 0; $i < count($arrayCompFamiliar); $i++) {
+        if($codigo != $arrayCompFamiliar[$i]->codigo) {
+            $arrayCompFamiliar[$i]->codigo = $posicao + 1;
+            $novoArray[$posicao++] = $arrayCompFamiliar[$i];
+        }
+    }
+
+    $_SESSION[Constantes::COMP_FAMILIAR] = $novoArray;
+    $arrayCompFamiliar = null;
+
+    echo imprimirGridSessao($novoArray);
+
+} else if ($op == 'detalhar') {
 
     $codigo = $_POST['codigo'];
 
@@ -85,7 +105,7 @@ if ($op == 'detalhar') {
 
     foreach ($arrayCompFamiliar as $compFamiliar) {
         if($codigo == $compFamiliar->codigo) {
-            return json_encode($arrayCompFamiliar[0]);
+            echo json_encode($compFamiliar);
         }
     }
 
@@ -109,9 +129,16 @@ if ($op == 'detalhar') {
 
     if(isset($_SESSION[Constantes::COMP_FAMILIAR])) {
         $arrayCompFamiliar = $_SESSION[Constantes::COMP_FAMILIAR];
-        $composicaoFamiliar->codigo = count($arrayCompFamiliar) + 1;
-        $arrayCompFamiliar[count($arrayCompFamiliar)] = $composicaoFamiliar;
-        $_SESSION[Constantes::COMP_FAMILIAR] = $arrayCompFamiliar;
+        $arrayRetorno = array();
+
+        $contCodigo = 0;
+        foreach ($arrayCompFamiliar as $compFamiliar) {
+            $compFamiliar->codigo = $contCodigo + 1;
+            $contCodigo++;
+            $arrayRetorno[count($arrayRetorno)] = $compFamiliar;
+        }
+
+        $_SESSION[Constantes::COMP_FAMILIAR] = $arrayRetorno;
     } else {
         $arrayCompFamiliar = array();
         $composicaoFamiliar->codigo = 1;

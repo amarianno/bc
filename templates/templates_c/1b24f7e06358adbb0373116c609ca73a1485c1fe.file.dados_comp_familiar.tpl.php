@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-04 14:21:43
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-05 07:10:45
          compiled from "templates/dados_comp_familiar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1245370595277993f5b4414-32500519%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1b24f7e06358adbb0373116c609ca73a1485c1fe' => 
     array (
       0 => 'templates/dados_comp_familiar.tpl',
-      1 => 1383582097,
+      1 => 1383642609,
       2 => 'file',
     ),
   ),
@@ -128,8 +128,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <td></td>
         <td></td>
         <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
         <td>
-            <input type="button" value="adicionar" class="bt-03" style="background: #4F92A7" onclick="addComposicaoFamiliar()"/>
+            <input type="button" value="Limpar Campos" class="bt-03" style="background: #4F92A7; cursor: hand" onclick="limparComposicaoFamiliar()"/>
+        </td>
+        <td>
+            <input type="button" value="adicionar" class="bt-03" style="background: #4F92A7; cursor: hand" onclick="addComposicaoFamiliar()"/>
         </td>
     </tr>
 </table>
