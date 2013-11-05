@@ -177,8 +177,42 @@ function excluirCompFam(codigo) {
 //************************* DADOS COMPOSICAO FAMILIAR ******************************************
 //************************* BEGIN CADASTRO ******************************************
 
+function naoValidado(campo) {
+    alert('Campo ' + campo + ' não pode ser vazio');
+    return false;
+}
 
 function cadastrar() {
+
+    if($("#txtNome").val() == '') {return naoValidado('DADOS PESSOAIS - Nome');}
+    if($("#txtDtNascimento").val() == '') {return naoValidado('DADOS PESSOAIS - Data de Nascimento');}
+    if($("#txtRg").val() == '') {return naoValidado('DADOS PESSOAIS - RG');}
+    if($("#txtCPF").val() == '') {return naoValidado('DADOS PESSOAIS - CPF');}
+    if($("#txtProfissao").val() == '') {return naoValidado('DADOS PESSOAIS - Profissão/A procura de');}
+    if($("#txtEmail").val() == '') {return naoValidado('DADOS PESSOAIS - Email');}
+    if($("#txtProblemaEspirita").val() == '') {return naoValidado('DADOS PESSOAIS - Problema com casa espírita');}
+
+    if($("#txtEndereco").val() == '') {return naoValidado('DADOS ENDEREÇO - Endereço');}
+    if($("#txtNumero").val() == '') {return naoValidado('DADOS ENDEREÇO - Número da Casa');}
+    if($("#txtPtReferencia").val() == '') {return naoValidado('DADOS ENDEREÇO - Ponto de Referência');}
+    if($("#txtBairro").val() == '') {return naoValidado('DADOS ENDEREÇO - Bairro');}
+    if($("#txtCidade").val() == '') {return naoValidado('DADOS ENDEREÇO - Cidade');}
+    if($("#txtCep").val() == '') {return naoValidado('DADOS ENDEREÇO - CEP');}
+    if($("#txtTel1").val() == '') {return naoValidado('DADOS ENDEREÇO - Telefone 1');}
+    if(document.getElementById('selOutrasRenda').value == '4') {
+        if($("#txtDeOnde").val() == '') {return naoValidado('DADOS ENDEREÇO - De onde?');}
+    }
+
+    if(document.getElementById('selQtdeFilhos').value != '0') {
+        if($("#txtNomePai1").val() == '') {return naoValidado('DADOS FAMILIARES - Pais das Crianças (1os)');}
+    }
+    if($("#txtNecessidadeBasica").val() == '') {return naoValidado('DADOS FAMILIARES - Maior necessidade básica');}
+    if($("#txtUbsAcessa").val() == '') {return naoValidado('DADOS FAMILIARES - UBS que acessa');}
+    if($("#txtQtdePessoasMoram").val() == '') {return naoValidado('DADOS FAMILIARES - Moram na residência (Qtde)');}
+    if($("#txtAtendMedico").val() == '') {return naoValidado('DADOS FAMILIARES - Atendimento médico especializado');}
+
+    if($("#txtObjetivo").val() == '') {return naoValidado('ASSISTÊNCIA - Objetivo do Cadastro');}
+    if($("#txtComentario").val() == '') {return naoValidado('ASSISTÊNCIA - Comentários');}
 
     var campos =  "operacao=inserir";
     // dados pessoais

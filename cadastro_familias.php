@@ -64,7 +64,6 @@ $camposValoresCompFamiliar = array();
 //foreach ($arrayCompFamiliar as $compFamiliar) {
 for($i = 0; $i < count($arrayCompFamiliar); $i++) {
     //$compFamiliar = new ComposicaoFamiliar();
-
     $camposValoresCompFamiliar[$i]['nome'] = $arrayCompFamiliar[$i]->nome;
     $camposValoresCompFamiliar[$i]['grau_parentesco'] = $arrayCompFamiliar[$i]->grauParentesco;
     $camposValoresCompFamiliar[$i]['escola'] = $arrayCompFamiliar[$i]->escola;
@@ -87,10 +86,11 @@ $camposValores['comentario'] = $_POST['txtComentario'];
 
 $camposValores['composicao_familiar'] = $camposValoresCompFamiliar;
 
-/*foreach ($camposValoresCompFamiliar as $compFamiliar) {
-    $composicaoFamiliarBC->incluir($_SESSION[BANCO_SESSAO], $compFamiliar);
-}*/
+$retorno = "";
+for($i = 0; $i < count($camposValoresCompFamiliar); $i++) {
+   //$composicaoFamiliarBC->incluir($_SESSION[BANCO_SESSAO], $camposValoresCompFamiliar[$i]);
+}
 //$familiaBC->incluir($_SESSION[BANCO_SESSAO], $camposValores);
 
-print_r($camposValores);
+//print_r($camposValoresCompFamiliar);
 ?>
