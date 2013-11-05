@@ -140,7 +140,6 @@ function detalharCompFam(codigo) {
         url: 'addComposicaoFamiliar.php',
         data: campos,
         success: function (data) {
-            alert(data);
             var composicaoFamiliar = jQuery.parseJSON ( data );
             $("#txtCompFamiliar").val(composicaoFamiliar.nome);
             document.getElementById('selGrauParenstescoAcompFamiliar').value = composicaoFamiliar.grauParentesco;

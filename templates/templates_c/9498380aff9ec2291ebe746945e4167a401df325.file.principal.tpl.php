@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-04 10:55:27
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-05 08:46:01
          compiled from "templates/principal.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:183143587251800215cdbeb6-97691475%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9498380aff9ec2291ebe746945e4167a401df325' => 
     array (
       0 => 'templates/principal.tpl',
-      1 => 1383568444,
+      1 => 1383648113,
       2 => 'file',
     ),
   ),
@@ -60,7 +60,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </p>
                     </div>
                     <div id="tabs-5">
-                        <p>Assistência</p>
+                        <p><?php echo $_smarty_tpl->getSubTemplate ("dados_bc.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+</p>
                     </div>
                 </div>
             </td>

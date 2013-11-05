@@ -35,7 +35,7 @@
                         <p>{include file="dados_comp_familiar.tpl"}</p>
                     </div>
                     <div id="tabs-5">
-                        <p>Assistência</p>
+                        <p>{include file="dados_bc.tpl"}</p>
                     </div>
                 </div>
             </td>

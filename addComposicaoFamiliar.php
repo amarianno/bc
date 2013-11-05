@@ -129,6 +129,7 @@ if ($op == 'excluir') {
 
     if(isset($_SESSION[Constantes::COMP_FAMILIAR])) {
         $arrayCompFamiliar = $_SESSION[Constantes::COMP_FAMILIAR];
+        $arrayCompFamiliar[count($arrayCompFamiliar)] = $composicaoFamiliar;
         $arrayRetorno = array();
 
         $contCodigo = 0;
@@ -146,7 +147,7 @@ if ($op == 'excluir') {
         $_SESSION[Constantes::COMP_FAMILIAR] = $arrayCompFamiliar;
     }
 
-    echo imprimirGridSessao($arrayCompFamiliar);
+    echo imprimirGridSessao($_SESSION[Constantes::COMP_FAMILIAR]);
 } else {
     echo imprimirGridSessao($_SESSION[Constantes::COMP_FAMILIAR]);
 }
