@@ -8,6 +8,8 @@ require_once ('include/retornaconexao.inc.php');
 $op = $_POST['operacao'];
 
 $camposValores = array();
+$familiaBC = new FamiliaBC();
+$composicaoFamiliarBC = new ComposicaoFamiliarBC();
 
 //DADOS PESSOAIS
 $camposValores['nome'] = $_POST['txtNome'];
@@ -63,18 +65,18 @@ $camposValoresCompFamiliar = array();
 for($i = 0; $i < count($arrayCompFamiliar); $i++) {
     //$compFamiliar = new ComposicaoFamiliar();
 
-    $camposValoresCompFamiliar[$i]['nome'] = $compFamiliar->nome;
-    $camposValoresCompFamiliar[$i]['grau_parentesco'] = $compFamiliar->grauParentesco;
-    $camposValoresCompFamiliar[$i]['escola'] = $compFamiliar->escola;
-    $camposValoresCompFamiliar[$i]['data_nascimento'] = $compFamiliar->dataNascimento;
-    $camposValoresCompFamiliar[$i]['trabalha'] = $compFamiliar->trabalho;
-    $camposValoresCompFamiliar[$i]['renda'] = $compFamiliar->renda;
-    $camposValoresCompFamiliar[$i]['rg'] = $compFamiliar->rg;
-    $camposValoresCompFamiliar[$i]['grupo_casa'] = $compFamiliar->grupoCasa;
-    $camposValoresCompFamiliar[$i]['gestante'] = $compFamiliar->gestante;
-    $camposValoresCompFamiliar[$i]['deficiencia'] = $compFamiliar->deficiencia;
-    $camposValoresCompFamiliar[$i]['vicio'] = $compFamiliar->vicio;
-    $camposValoresCompFamiliar[$i]['atend_medico_especial'] = $compFamiliar->atendimentoMedicoEspecializado;
+    $camposValoresCompFamiliar[$i]['nome'] = $arrayCompFamiliar[$i]->nome;
+    $camposValoresCompFamiliar[$i]['grau_parentesco'] = $arrayCompFamiliar[$i]->grauParentesco;
+    $camposValoresCompFamiliar[$i]['escola'] = $arrayCompFamiliar[$i]->escola;
+    $camposValoresCompFamiliar[$i]['data_nascimento'] = implode('-',array_reverse(explode('/', $arrayCompFamiliar[$i]->dataNascimento)));
+    $camposValoresCompFamiliar[$i]['trabalha'] = $arrayCompFamiliar[$i]->trabalho;
+    $camposValoresCompFamiliar[$i]['renda'] = $arrayCompFamiliar[$i]->renda;
+    $camposValoresCompFamiliar[$i]['rg'] = $arrayCompFamiliar[$i]->rg;
+    $camposValoresCompFamiliar[$i]['grupo_casa'] = $arrayCompFamiliar[$i]->grupoCasa;
+    $camposValoresCompFamiliar[$i]['gestante'] = $arrayCompFamiliar[$i]->gestante;
+    $camposValoresCompFamiliar[$i]['deficiencia'] = $arrayCompFamiliar[$i]->deficiencia;
+    $camposValoresCompFamiliar[$i]['vicio'] = $arrayCompFamiliar[$i]->vicio;
+    $camposValoresCompFamiliar[$i]['atend_medico_especial'] = $arrayCompFamiliar[$i]->atendimentoMedicoEspecializado;
 }
 
 //Dados Assistência
@@ -84,6 +86,11 @@ $camposValores['acompanhamento'] = $_POST['selAcompanhamento'];
 $camposValores['comentario'] = $_POST['txtComentario'];
 
 $camposValores['composicao_familiar'] = $camposValoresCompFamiliar;
+
+//$familiaBC->incluir($_SESSION[BANCO_SESSAO], $camposValores);
+/*foreach ($camposValoresCompFamiliar as $compFamiliar) {
+    $composicaoFamiliarBC->incluir($_SESSION[BANCO_SESSAO], $compFamiliar);
+}*/
 
 print_r($camposValores);
 ?>
