@@ -3,7 +3,7 @@
 
 class FamiliaDAOPersistivel extends DAOPersistivel {
 
-    const NOME_TABELA = "cadastro_familia";
+    const NOME_TABELA = "ficha_cadastral";
 
     public function __construct() {
         parent::__construct(FamiliaDAOPersistivel::NOME_TABELA);

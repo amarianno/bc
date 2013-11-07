@@ -88,9 +88,8 @@ $camposValores['composicao_familiar'] = $camposValoresCompFamiliar;
 
 $retorno = "";
 for($i = 0; $i < count($camposValoresCompFamiliar); $i++) {
-   //$composicaoFamiliarBC->incluir($_SESSION[BANCO_SESSAO], $camposValoresCompFamiliar[$i]);
+   $composicaoFamiliarBC->incluir($_SESSION[BANCO_SESSAO], $camposValoresCompFamiliar[$i]);
 }
-//$familiaBC->incluir($_SESSION[BANCO_SESSAO], $camposValores);
+$familiaBC->incluir($_SESSION[BANCO_SESSAO], $camposValores);
 
-//print_r($camposValoresCompFamiliar);
 ?>

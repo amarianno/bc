@@ -91,7 +91,7 @@
                 <option value="2">
                     <span style="color: red">Vermelho</span>
                 </option>
-                <option value="2">
+                <option value="3">
                     <span style="color: #008000">Verde</span>
                 </option>
             </select>
