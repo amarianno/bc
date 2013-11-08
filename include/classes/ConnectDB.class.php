@@ -9,7 +9,7 @@ class ConnectDB {
     var $server = "localhost";
     var $user = "root";
     var $passwd = 'Bu$carta5';
-    var $dbname = 'ambulatorio';
+    var $dbname = 'bom_caminho';
 
     //Erro, conexão e resultados
     var $connection;

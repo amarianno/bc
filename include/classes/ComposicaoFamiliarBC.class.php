@@ -1,5 +1,6 @@
 <?php
 
+require_once('Loader.class.php');
 
 class ComposicaoFamiliarBC extends BC {
 

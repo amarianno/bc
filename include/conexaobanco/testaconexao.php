@@ -1,6 +1,6 @@
 <?php
 
-    require_once('../include/confconexao.inc.php');
+    require_once('../confconexao.inc.php');
     require_once('../classes/Loader.class.php');
 
     $fabrica = new SimpleFactoryDAOBanco();
@@ -12,3 +12,6 @@
         echo $e->getMessage();
     }
     $banco->fechaConexao();
+
+
+?>

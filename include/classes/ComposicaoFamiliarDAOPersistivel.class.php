@@ -1,5 +1,6 @@
 <?php
 
+require_once('Loader.class.php');
 
 class ComposicaoFamiliarDAOPersistivel extends DAOPersistivel {
 
