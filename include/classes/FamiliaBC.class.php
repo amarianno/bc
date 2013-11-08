@@ -1,5 +1,7 @@
 <?php
 
+require_once('Loader.class.php');
+
 class FamiliaBC extends BC {
 
     private $DAO;

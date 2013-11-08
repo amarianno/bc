@@ -273,10 +273,13 @@ function cadastrar() {
         url: 'cadastro_familias.php',
         data: campos,
         success: function (data) {
-            document.getElementById('response').innerHTML = '<b>' + data + '</b>';
+            alert(data);
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert(xhr.status);
+            alert(thrownError);
         }
     });
-
 }
 
 //************************* END CADASTRO ******************************************

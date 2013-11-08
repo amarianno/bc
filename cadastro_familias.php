@@ -21,7 +21,7 @@ $camposValores['estado_civil'] = $_POST['selEstadoCivil'];
 $camposValores['escolaridade'] = $_POST['selEscolaridade'];
 $camposValores['trabalha'] = $_POST['selTrabalha'];
 $camposValores['tipo_trabalho'] = $_POST['selTipoTrabalho'];
-$camposValores['profissao'] = $_POST['txtProfissao'];
+$camposValores['profissao_procura_de'] = $_POST['txtProfissao'];
 $camposValores['email'] = $_POST['txtEmail'];
 $camposValores['facebook'] = $_POST['txtFacebook'];
 $camposValores['religiao'] = $_POST['selReligiao'];
@@ -30,22 +30,22 @@ $camposValores['problema_espirita'] = $_POST['txtProblemaEspirita'];
 
 // dados endereço
 $camposValores['endereco'] = $_POST['txtEndereco'];
-$camposValores['numero_endereco'] = $_POST['txtNumero'];
+$camposValores['numero_casa'] = $_POST['txtNumero'];
 $camposValores['complemento'] = $_POST['txtComplemento'];
 $camposValores['pt_referencia'] = $_POST['txtPtReferencia'];
 $camposValores['bairro'] = $_POST['txtBairro'];
 $camposValores['cidade'] = $_POST['txtCidade'];
-$camposValores['cep'] = $_POST['txtCep'];
+$camposValores['CEP'] = $_POST['txtCep'];
 $camposValores['telefone1'] = $_POST['txtTel1'];
 $camposValores['telefone2'] = $_POST['txtTel2'];
 $camposValores['tipo_residencia'] = $_POST['selTipoResidencia'];
 $camposValores['tipo_construcao'] = $_POST['selTipoConstrucao'];
 $camposValores['situacao_residencia'] = $_POST['selSituacaoResidencia'];
-$camposValores['num_comodos'] = $_POST['txtNumComodos'];
+$camposValores['numero_comodos'] = $_POST['txtNumComodos'];
 $camposValores['renda'] = $_POST['selRenda'];
 $camposValores['outra_renda'] = $_POST['selOutrasRenda'];
 $camposValores['de_onde'] = $_POST['txtDeOnde'];
-$camposValores['possui_veiculo'] = $_POST['selPossuiVeiculo'];
+$camposValores['veiculo'] = $_POST['selPossuiVeiculo'];
 
 // dados familiares
 $camposValores['qtde_filhos'] = $_POST['selQtdeFilhos'];
@@ -60,6 +60,9 @@ $camposValores['atend_medico'] = $_POST['txtAtendMedico'];
 
 //Dados Composição Familiar
 $arrayCompFamiliar = $_SESSION[Constantes::COMP_FAMILIAR];
+if(!isset($arrayCompFamiliar)) {
+    $arrayCompFamiliar = array();
+}
 $camposValoresCompFamiliar = array();
 //foreach ($arrayCompFamiliar as $compFamiliar) {
 for($i = 0; $i < count($arrayCompFamiliar); $i++) {
@@ -78,18 +81,25 @@ for($i = 0; $i < count($arrayCompFamiliar); $i++) {
     $camposValoresCompFamiliar[$i]['atend_medico_especial'] = $arrayCompFamiliar[$i]->atendimentoMedicoEspecializado;
 }
 
+
 //Dados Assistência
 $camposValores['objetivo_cadastro'] = $_POST['txtObjetivo'];
 $camposValores['visita'] = $_POST['selVisita'];
 $camposValores['acompanhamento'] = $_POST['selAcompanhamento'];
 $camposValores['comentario'] = $_POST['txtComentario'];
 
-$camposValores['composicao_familiar'] = $camposValoresCompFamiliar;
+//$camposValores['composicao_familiar'] = $camposValoresCompFamiliar;
 
 $retorno = "";
 for($i = 0; $i < count($camposValoresCompFamiliar); $i++) {
    $composicaoFamiliarBC->incluir($_SESSION[BANCO_SESSAO], $camposValoresCompFamiliar[$i]);
 }
-$familiaBC->incluir($_SESSION[BANCO_SESSAO], $camposValores);
+
+try {
+    $id = $familiaBC->incluir($_SESSION[BANCO_SESSAO], $camposValores);
+    return $id;
+} catch (Exception $ex) {
+    return $ex->getMessage();
+}
 
 ?>
