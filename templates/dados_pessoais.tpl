@@ -4,13 +4,13 @@
             Nome
         </td>
         <td>
-            <input id="txtNome" name="txtNome" type="text" tabindex="1"/>
+            <input id="txtNome" name="txtNome" required="true" type="text" tabindex="1"/>
         </td>
         <td>
             Data de Nascimento
         </td>
         <td>
-            <input id="txtDtNascimento" name="txtDtNascimento" type="text" tabindex="1" />
+            <input id="txtDtNascimento" name="txtDtNascimento" required="true" type="text" tabindex="1" />
         </td>
     </tr>
     <tr>
@@ -18,13 +18,13 @@
             RG
         </td>
         <td>
-            <input id="txtRg" name="txtRg" type="text" tabindex="2"/>
+            <input id="txtRg" name="txtRg" required="true" type="text" tabindex="2"/>
         </td>
         <td>
             CPF
         </td>
         <td>
-            <input id="txtCPF" name="txtRg" type="text" tabindex="3"/>
+            <input id="txtCPF" name="txtCPF" required="true" type="text" tabindex="3"/>
         </td>
     </tr>
     <tr>
@@ -179,13 +179,13 @@
         </td>
         <td>
             <select id="selTipoTrabalho" name="selTipoTrabalho" tabindex="8" style="width: 250px;">
-                <option value="R" selected="selected">
+                <option value="1" selected="selected">
                     Registrado
                 </option>
-                <option value="A">
+                <option value="2">
                     Autônomo
                 </option>
-                <option value="N">
+                <option value="3">
                     Não Trabalha
                 </option>
             </select>
@@ -202,7 +202,7 @@
             Email
         </td>
         <td>
-            <input id="txtEmail" name="txtEmail" type="text" tabindex="10"/>
+            <input id="txtEmail" name="txtEmail" required="true" type="text" tabindex="10"/>
         </td>
         <td>
             Facebook
@@ -268,7 +268,7 @@
             Tem problema em frequentar casa espírita?
         </td>
         <td colspan="2">
-            <input id="txtProblemaEspirita" name="txtProblemaEspirita" type="text" tabindex="14" style="width: 410px"/>
+            <input id="txtProblemaEspirita" name="txtProblemaEspirita" required="true" type="text" tabindex="14" style="width: 410px"/>
         </td>
     </tr>
 </table>

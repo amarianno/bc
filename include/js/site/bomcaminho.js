@@ -273,13 +273,68 @@ function cadastrar() {
         url: 'cadastro_familias.php',
         data: campos,
         success: function (data) {
-            alert(data);
+            alert('Incluído com sucesso');
+            //limparCamposFichaCadastral();
         },
         error: function (xhr, ajaxOptions, thrownError) {
-            alert(xhr.status);
-            alert(thrownError);
+            alert("Erro: " + xhr.status + " - " + thrownError);
         }
     });
+}
+
+function limparCamposFichaCadastral() {
+    // dados pessoais
+    $("#txtNome").val('');
+    $("#txtDtNascimento").val('');
+    $("#txtRg").val('');
+    $("#txtCPF").val('');
+    document.getElementById('selNaturalidade').value = 'SP';
+    document.getElementById('selEstadoCivil').value = 1;
+    document.getElementById('selEscolaridade').value = 1;
+    document.getElementById('selTrabalha').value = 'S';
+    document.getElementById('selTipoTrabalho').value = 1;
+    $("#txtProfissao").val('');
+    $("#txtEmail").val('');
+    $("#txtFacebook").val('');
+    document.getElementById('selReligiao').value = 1;
+    document.getElementById('selFrequenta').value = 'N';
+    $("#txtProblemaEspirita").val('');
+
+    // dados endereço
+    $("#txtEndereco").val('');
+    $("#txtNumero").val('');
+    $("#txtComplemento").val('');
+    $("#txtPtReferencia").val('');
+    $("#txtBairro").val('');
+    $("#txtCidade").val('');
+    $("#txtCep").val('');
+    $("#txtTel1").val('');
+    $("#txtTel2").val('');
+    document.getElementById('selTipoResidencia').value = 1;
+    document.getElementById('selTipoConstrucao').value = 1;
+    document.getElementById('selSituacaoResidencia').value = 1;
+    $("#txtNumComodos").val('');
+    document.getElementById('selRenda').value = 1;
+    document.getElementById('selOutrasRenda').value = 1;
+    $("#txtDeOnde").val('');
+    document.getElementById('selPossuiVeiculo').value = 1;
+
+    // dados familiares
+    document.getElementById('selQtdeFilhos').value = 0;
+    document.getElementById('selTodosUnicoPai').value = 1;
+    $("#txtNomePai1").val('');
+    $("#txtNomePai2").val('');
+    $("#txtNecessidadeBasica").val('');
+    document.getElementById('selCorUbs').value = 1;
+    $("#txtUbsAcessa").val('');
+    $("#txtQtdePessoasMoram").val('');
+    $("#txtAtendMedico").val('');
+
+    //Dados Assistência
+    $("#txtObjetivo").val('');
+    document.getElementById('selVisita').value = 'S';
+    document.getElementById('selAcompanhamento').value = 'S';
+    $("#txtComentario").val('');
 }
 
 //************************* END CADASTRO ******************************************

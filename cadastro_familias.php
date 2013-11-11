@@ -47,6 +47,15 @@ $camposValores['outra_renda'] = $_POST['selOutrasRenda'];
 $camposValores['de_onde'] = $_POST['txtDeOnde'];
 $camposValores['veiculo'] = $_POST['selPossuiVeiculo'];
 
+if(!is_numeric($camposValores['numero_casa'])) {
+    echo "DADOS ENDEREÇO - Número deve ser numérico";
+    return;
+}
+if(!is_numeric($camposValores['numero_comodos'])) {
+    echo "DADOS ENDEREÇO - Nº de Cômodos deve ser numérico";
+    return;
+}
+
 // dados familiares
 $camposValores['qtde_filhos'] = $_POST['selQtdeFilhos'];
 $camposValores['unico_pai'] = $_POST['selTodosUnicoPai'];
@@ -97,9 +106,9 @@ for($i = 0; $i < count($camposValoresCompFamiliar); $i++) {
 
 try {
     $id = $familiaBC->incluir($_SESSION[BANCO_SESSAO], $camposValores);
-    return $id;
+    echo $id;
 } catch (Exception $ex) {
-    return $ex->getMessage();
+    echo $ex->getMessage();
 }
 
 ?>

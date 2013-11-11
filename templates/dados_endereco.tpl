@@ -4,7 +4,7 @@
             Endereço
         </td>
         <td colspan="3">
-            <input id="txtEndereco" name="txtEndereco" type="text" tabindex="1" style="width: 664px"/>
+            <input id="txtEndereco" name="txtEndereco" required="true" type="text" tabindex="1" style="width: 664px"/>
         </td>
     </tr>
     <tr>
@@ -12,7 +12,7 @@
             Número
         </td>
         <td>
-            <input id="txtNumero" name="txtNumero" type="text" tabindex="2"/>
+            <input id="txtNumero" name="txtNumero" required="true" type="text" tabindex="2"/>
         </td>
         <td>
             Complemento
@@ -26,13 +26,13 @@
             Ponto de Referência
         </td>
         <td>
-            <input id="txtPtReferencia" name="txtPtReferencia" type="text" tabindex="4"/>
+            <input id="txtPtReferencia" name="txtPtReferencia" required="true" type="text" tabindex="4"/>
         </td>
         <td>
             Bairro
         </td>
         <td>
-            <input id="txtBairro" name="txtBairro" type="text" tabindex="5" />
+            <input id="txtBairro" name="txtBairro" required="true" type="text" tabindex="5" />
         </td>
     </tr>
     <tr>
@@ -40,7 +40,7 @@
             Cidade
         </td>
         <td>
-            <input id="txtCidade" name="txtCidade" type="text" tabindex="6"/>
+            <input id="txtCidade" name="txtCidade" required="true" type="text" tabindex="6"/>
         </td>
         <td>
             CEP
@@ -54,7 +54,7 @@
             Telefone 1
         </td>
         <td>
-            <input id="txtTel1" name="txtTel1" type="text" tabindex="8"/>
+            <input id="txtTel1" name="txtTel1" required="true" type="text" tabindex="8"/>
         </td>
         <td>
             Telefone 2

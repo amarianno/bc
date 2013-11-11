@@ -21,6 +21,7 @@
                 $conta++;
             }
             $sql .= ") VALUES (";
+
             $conta = 0;
             foreach ($camposValores as $valor) {
                 $sql .= $this->formataValor($valor, $conta, $size);

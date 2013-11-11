@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-05 11:27:36
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-11 15:11:54
          compiled from "templates/dados_pessoais.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1814781932527445cd6d1eb8-38664828%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ffbbbf4aa62a28f710dc67104909afffd814f82a' => 
     array (
       0 => 'templates/dados_pessoais.tpl',
-      1 => 1383658055,
+      1 => 1384189855,
       2 => 'file',
     ),
   ),
@@ -200,13 +200,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </td>
         <td>
             <select id="selTipoTrabalho" name="selTipoTrabalho" tabindex="8" style="width: 250px;">
-                <option value="R" selected="selected">
+                <option value="1" selected="selected">
                     Registrado
                 </option>
-                <option value="A">
+                <option value="2">
                     Autônomo
                 </option>
-                <option value="N">
+                <option value="3">
                     Não Trabalha
                 </option>
             </select>
