@@ -26,6 +26,10 @@ class ComposicaoFamiliarBC extends BC {
         return null;
     }
 
+    public function teste() {
+        return "funcionou";
+    }
+
 }
 
 ?>

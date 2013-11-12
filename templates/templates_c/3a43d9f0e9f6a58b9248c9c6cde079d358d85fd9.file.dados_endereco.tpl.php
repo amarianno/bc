@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-04 13:53:21
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-12 14:08:50
          compiled from "templates/dados_endereco.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:93627068652769301550e83-91648250%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3a43d9f0e9f6a58b9248c9c6cde079d358d85fd9' => 
     array (
       0 => 'templates/dados_endereco.tpl',
-      1 => 1383580389,
+      1 => 1384192023,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             Endereço
         </td>
         <td colspan="3">
-            <input id="txtEndereco" name="txtEndereco" type="text" tabindex="1" style="width: 664px"/>
+            <input id="txtEndereco" name="txtEndereco" required="true" type="text" tabindex="1" style="width: 664px"/>
         </td>
     </tr>
     <tr>
@@ -33,7 +33,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             Número
         </td>
         <td>
-            <input id="txtNumero" name="txtNumero" type="text" tabindex="2"/>
+            <input id="txtNumero" name="txtNumero" required="true" type="text" tabindex="2"/>
         </td>
         <td>
             Complemento
@@ -47,13 +47,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             Ponto de Referência
         </td>
         <td>
-            <input id="txtPtReferencia" name="txtPtReferencia" type="text" tabindex="4"/>
+            <input id="txtPtReferencia" name="txtPtReferencia" required="true" type="text" tabindex="4"/>
         </td>
         <td>
             Bairro
         </td>
         <td>
-            <input id="txtBairro" name="txtBairro" type="text" tabindex="5" />
+            <input id="txtBairro" name="txtBairro" required="true" type="text" tabindex="5" />
         </td>
     </tr>
     <tr>
@@ -61,7 +61,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             Cidade
         </td>
         <td>
-            <input id="txtCidade" name="txtCidade" type="text" tabindex="6"/>
+            <input id="txtCidade" name="txtCidade" required="true" type="text" tabindex="6"/>
         </td>
         <td>
             CEP
@@ -75,7 +75,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             Telefone 1
         </td>
         <td>
-            <input id="txtTel1" name="txtTel1" type="text" tabindex="8"/>
+            <input id="txtTel1" name="txtTel1" required="true" type="text" tabindex="8"/>
         </td>
         <td>
             Telefone 2

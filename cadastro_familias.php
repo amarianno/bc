@@ -5,6 +5,9 @@ require_once ('include/retornasmarty.inc.php');
 require_once ('include/confconexao.inc.php');
 require_once ('include/retornaconexao.inc.php');
 
+
+
+
 $op = $_POST['operacao'];
 
 $camposValores = array();
@@ -69,6 +72,7 @@ $camposValores['atend_medico'] = $_POST['txtAtendMedico'];
 
 //Dados Composição Familiar
 $arrayCompFamiliar = $_SESSION[Constantes::COMP_FAMILIAR];
+
 if(!isset($arrayCompFamiliar)) {
     $arrayCompFamiliar = array();
 }
@@ -96,8 +100,6 @@ $camposValores['objetivo_cadastro'] = $_POST['txtObjetivo'];
 $camposValores['visita'] = $_POST['selVisita'];
 $camposValores['acompanhamento'] = $_POST['selAcompanhamento'];
 $camposValores['comentario'] = $_POST['txtComentario'];
-
-//$camposValores['composicao_familiar'] = $camposValoresCompFamiliar;
 
 $retorno = "";
 for($i = 0; $i < count($camposValoresCompFamiliar); $i++) {

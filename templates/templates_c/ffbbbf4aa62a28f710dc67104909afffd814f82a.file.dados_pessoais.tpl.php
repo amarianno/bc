@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-11 15:11:54
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-12 14:08:50
          compiled from "templates/dados_pessoais.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1814781932527445cd6d1eb8-38664828%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ffbbbf4aa62a28f710dc67104909afffd814f82a' => 
     array (
       0 => 'templates/dados_pessoais.tpl',
-      1 => 1384189855,
+      1 => 1384191995,
       2 => 'file',
     ),
   ),
@@ -25,13 +25,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             Nome
         </td>
         <td>
-            <input id="txtNome" name="txtNome" type="text" tabindex="1"/>
+            <input id="txtNome" name="txtNome" required="true" type="text" tabindex="1"/>
         </td>
         <td>
             Data de Nascimento
         </td>
         <td>
-            <input id="txtDtNascimento" name="txtDtNascimento" type="text" tabindex="1" />
+            <input id="txtDtNascimento" name="txtDtNascimento" required="true" type="text" tabindex="1" />
         </td>
     </tr>
     <tr>
@@ -39,13 +39,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             RG
         </td>
         <td>
-            <input id="txtRg" name="txtRg" type="text" tabindex="2"/>
+            <input id="txtRg" name="txtRg" required="true" type="text" tabindex="2"/>
         </td>
         <td>
             CPF
         </td>
         <td>
-            <input id="txtCPF" name="txtRg" type="text" tabindex="3"/>
+            <input id="txtCPF" name="txtCPF" required="true" type="text" tabindex="3"/>
         </td>
     </tr>
     <tr>
@@ -223,7 +223,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             Email
         </td>
         <td>
-            <input id="txtEmail" name="txtEmail" type="text" tabindex="10"/>
+            <input id="txtEmail" name="txtEmail" required="true" type="text" tabindex="10"/>
         </td>
         <td>
             Facebook
@@ -289,7 +289,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             Tem problema em frequentar casa espírita?
         </td>
         <td colspan="2">
-            <input id="txtProblemaEspirita" name="txtProblemaEspirita" type="text" tabindex="14" style="width: 410px"/>
+            <input id="txtProblemaEspirita" name="txtProblemaEspirita" required="true" type="text" tabindex="14" style="width: 410px"/>
         </td>
     </tr>
 </table><?php }} ?>
