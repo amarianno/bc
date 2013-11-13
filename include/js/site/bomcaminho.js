@@ -273,6 +273,7 @@ function cadastrar() {
         url: 'cadastro_familias.php',
         data: campos,
         success: function (data) {
+            alert(data);
             alert('Incluído com sucesso');
             //limparCamposFichaCadastral();
         },

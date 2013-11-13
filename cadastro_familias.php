@@ -70,16 +70,27 @@ $camposValores['ubs_acessa'] = $_POST['txtUbsAcessa'];
 $camposValores['qtde_moram_resid'] = $_POST['txtQtdePessoasMoram'];
 $camposValores['atend_medico'] = $_POST['txtAtendMedico'];
 
+//Dados Assistência
+$camposValores['objetivo_cadastro'] = $_POST['txtObjetivo'];
+$camposValores['visita'] = $_POST['selVisita'];
+$camposValores['acompanhamento'] = $_POST['selAcompanhamento'];
+$camposValores['comentario'] = $_POST['txtComentario'];
+
+$chaveRetorno = 0;
+try {
+    $chaveRetorno = $familiaBC->incluir($_SESSION[BANCO_SESSAO], $camposValores);
+} catch (Exception $ex) {
+    echo $ex->getMessage();
+}
+
 //Dados Composição Familiar
 $arrayCompFamiliar = $_SESSION[Constantes::COMP_FAMILIAR];
-
 if(!isset($arrayCompFamiliar)) {
     $arrayCompFamiliar = array();
 }
 $camposValoresCompFamiliar = array();
-//foreach ($arrayCompFamiliar as $compFamiliar) {
 for($i = 0; $i < count($arrayCompFamiliar); $i++) {
-    //$compFamiliar = new ComposicaoFamiliar();
+
     $camposValoresCompFamiliar[$i]['nome'] = $arrayCompFamiliar[$i]->nome;
     $camposValoresCompFamiliar[$i]['grau_parentesco'] = $arrayCompFamiliar[$i]->grauParentesco;
     $camposValoresCompFamiliar[$i]['escola'] = $arrayCompFamiliar[$i]->escola;
@@ -92,25 +103,11 @@ for($i = 0; $i < count($arrayCompFamiliar); $i++) {
     $camposValoresCompFamiliar[$i]['deficiencia'] = $arrayCompFamiliar[$i]->deficiencia;
     $camposValoresCompFamiliar[$i]['vicio'] = $arrayCompFamiliar[$i]->vicio;
     $camposValoresCompFamiliar[$i]['atend_medico_especial'] = $arrayCompFamiliar[$i]->atendimentoMedicoEspecializado;
+    $camposValoresCompFamiliar[$i]['cod_ficha_cadastral'] = $chaveRetorno;
 }
 
-
-//Dados Assistência
-$camposValores['objetivo_cadastro'] = $_POST['txtObjetivo'];
-$camposValores['visita'] = $_POST['selVisita'];
-$camposValores['acompanhamento'] = $_POST['selAcompanhamento'];
-$camposValores['comentario'] = $_POST['txtComentario'];
-
-$retorno = "";
 for($i = 0; $i < count($camposValoresCompFamiliar); $i++) {
-   $composicaoFamiliarBC->incluir($_SESSION[BANCO_SESSAO], $camposValoresCompFamiliar[$i]);
-}
-
-try {
-    $id = $familiaBC->incluir($_SESSION[BANCO_SESSAO], $camposValores);
-    echo $id;
-} catch (Exception $ex) {
-    echo $ex->getMessage();
+    $composicaoFamiliarBC->incluir($_SESSION[BANCO_SESSAO], $camposValoresCompFamiliar[$i]);
 }
 
 ?>
