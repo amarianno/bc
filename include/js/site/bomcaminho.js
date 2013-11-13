@@ -339,6 +339,49 @@ function limparCamposFichaCadastral() {
 }
 
 //************************* END CADASTRO ******************************************
+//************************* BEGIN CONSULTA GERAL ******************************************
+
+function consulta_geral() {
+
+    var campos =  "operacao=consultar";
+    // dados pessoais
+    campos += "&txtNome=" + $("#txtNome").val();
+    campos += "&txtCPF=" + $("#txtCPF").val();
+    campos += "&selNaturalidade=" + document.getElementById('selNaturalidade').value;
+    campos += "&selEscolaridade=" + document.getElementById('selEscolaridade').value;
+    campos += "&selReligiao=" + document.getElementById('selReligiao').value;
+
+    // dados endereço
+    campos += "&txtCidade=" + $("#txtCidade").val();
+    campos += "&selRenda=" + document.getElementById('selRenda').value;
+    campos += "&selOutrasRenda=" + document.getElementById('selOutrasRenda').value;
+
+    // dados familiares
+    campos += "&txtNecessidadeBasica=" + $("#txtNecessidadeBasica").val();
+    campos += "&selCorUbs=" + document.getElementById('selCorUbs').value;
+    campos += "&txtUbsAcessa=" + $("#txtUbsAcessa").val();
+    campos += "&txtQtdePessoasMoram=" + $("#txtQtdePessoasMoram").val();
+
+    //Dados Assistência
+    campos += "&selVisita=" + document.getElementById('selVisita').value;
+    campos += "&selAcompanhamento=" + document.getElementById('selAcompanhamento').value;
+
+    var elemento = document.getElementById('conteudoGrid');
+
+    $.ajax({
+        type: "POST",
+        url: 'consulta_geral.php',
+        data: campos,
+        success: function (data) {
+            elemento.innerHTML = data;
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert("Erro: " + xhr.status + " - " + thrownError);
+        }
+    });
+}
+
+//************************* END CONSULTA GERAL ********************************************
 //************************* BEGIN AUXILIARES******************************************
 function formataData(dataParaFormatar) {
     var dataSplit = dataParaFormatar.split("-");

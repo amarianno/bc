@@ -23,7 +23,7 @@ class FamiliaBC extends BC {
     }
 
     public function consultar(DAOBanco $banco, $campos, FiltroSQL $filtro = null) {
-        return null;
+        return $this->DAO->consultar($banco, $campos, $filtro);
     }
 
 }
