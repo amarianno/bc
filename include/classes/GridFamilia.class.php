@@ -9,8 +9,27 @@ class GridFamilia {
         $cor = false;
         $htmlRetorno = "";
 
+        $htmlRetorno .= "<br>";
+        $htmlRetorno .= "<br>";
+        $htmlRetorno .= "<br>";
+        $htmlRetorno .= "<br>";
+        $htmlRetorno .= "<br>";
+        $htmlRetorno .= "<br>";
+        $htmlRetorno .= "<br>";
+        $htmlRetorno .= "<br>";
+        $htmlRetorno .= "<br>";
+        $htmlRetorno .= "<br>";
+        $htmlRetorno .= "<br>";
+        $htmlRetorno .= "<br>";
+        $htmlRetorno .= "<br>";
+        $htmlRetorno .= "<br>";
+        $htmlRetorno .= "<br>";
+        $htmlRetorno .= "<br>";
+        $htmlRetorno .= "<br>";
+        $htmlRetorno .= "<br>";
+
         if(count($listaFamilias) > 0) {
-            $htmlRetorno .= count($listaFamilias)." famílias atendem aos dados da consulta";
+            $htmlRetorno .= count($listaFamilias)." família(s) atende(m) aos dados da consulta";
         }
         $htmlRetorno .= "<div class='datagrid'>";
         $htmlRetorno .= "<table id='mainDeck'>";
@@ -19,7 +38,7 @@ class GridFamilia {
         $htmlRetorno .= "       <th>Nome</th>";
         $htmlRetorno .= "       <th>CPF</th>";
         $htmlRetorno .= "       <th>Cidade</th>";
-        $htmlRetorno .= "       <th>Necessidade Báscia</th>";
+        $htmlRetorno .= "       <th>Necessidade Básica</th>";
         $htmlRetorno .= "       <th>Ubs que Acessa</th>";
         $htmlRetorno .= "   </tr>";
         $htmlRetorno .= "</thead>";

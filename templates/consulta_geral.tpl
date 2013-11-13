@@ -157,10 +157,7 @@
             </td>
             <td>
                 <select id="selReligiao" name="selReligiao" tabindex="12" style="width: 100%;">
-                    <option value="" selected="selected">
-
-                    </option>
-                    <option value="1">
+                    <option value="1" selected="selected">
                         Nenhuma
                     </option>
                     <option value="2">

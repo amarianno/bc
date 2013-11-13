@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-13 14:07:31
+<?php /* Smarty version Smarty-3.1.13, created on 2013-11-13 15:07:21
          compiled from "templates/consulta_geral.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:94309208152837645dbd931-33962750%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ab9beed8600ad2d1d3913393085baf62c1ba8e0e' => 
     array (
       0 => 'templates/consulta_geral.tpl',
-      1 => 1384358850,
+      1 => 1384362429,
       2 => 'file',
     ),
   ),
@@ -36,7 +36,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <li><a href="#tabs-1">Consulta Geral</a></li>
 </ul>
 <div id="tabs-1">
-    <form action="#" onsubmit="a(); return false;">
+    <form action="#" onsubmit="consulta_geral(); return false;">
 
         <table width="100%" align="center" cellspacing="4" cellpadding="0">
         <tr>
@@ -180,10 +180,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             </td>
             <td>
                 <select id="selReligiao" name="selReligiao" tabindex="12" style="width: 100%;">
-                    <option value="" selected="selected">
-
-                    </option>
-                    <option value="1">
+                    <option value="1" selected="selected">
                         Nenhuma
                     </option>
                     <option value="2">
@@ -343,7 +340,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             </td>
         </tr>
         </table>
-        <input type="button" tabindex="4" class="bt-03" style="background: #4F92A7; cursor: hand" value="Consultar" onclick="a();"/>
+        <input type="button" tabindex="4" class="bt-03" style="background: #4F92A7; cursor: hand" value="Consultar" onclick="consulta_geral()"/>
     </form>
 </div>
 </div>
