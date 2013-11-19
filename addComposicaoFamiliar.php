@@ -25,7 +25,7 @@ if ($op == 'excluir') {
     $_SESSION[Constantes::COMP_FAMILIAR] = $novoArray;
     $arrayCompFamiliar = null;
 
-    echo imprimirGridSessao($novoArray);
+    echo GridCompFamiliar::gridToHtml($novoArray);
 
 } else if ($op == 'detalhar') {
 

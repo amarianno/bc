@@ -58,8 +58,6 @@ class GridCompFamiliar {
                 $htmlRetorno .= "   <td>" . $compFamiliar->grupoCasa . "</td>";
                 $htmlRetorno .= "   <td>" . "<img src='include/img/icon/delete-icon.png' onclick='excluirCompFam(".$compFamiliar->codigo.")'  />" . "</td>";
                 $htmlRetorno .= '</tr>';
-
-
             }
         } else {
             $htmlRetorno .= "   <tr class='conteudo'>";
