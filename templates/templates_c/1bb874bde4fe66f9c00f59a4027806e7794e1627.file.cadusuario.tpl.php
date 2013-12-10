@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-12-10 10:36:23
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-10 11:34:42
          compiled from "templates/cadusuario.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:38118232852a702e679efd7-13163327%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1bb874bde4fe66f9c00f59a4027806e7794e1627' => 
     array (
       0 => 'templates/cadusuario.tpl',
-      1 => 1386678977,
+      1 => 1386682480,
       2 => 'file',
     ),
   ),
@@ -62,7 +62,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         </td>
                         <td>
                             <input type="text" name="txtNome" id="txtNome" required value="<?php echo $_smarty_tpl->tpl_vars['nome']->value;?>
-" size="50">
+" size="50" onblur="onBlurNome()">
                         </td>
                     </tr>
                     <tr>
@@ -83,11 +83,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         </td>
                     </tr>
                     <tr>
+                        <td>
+                            <br>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
                         <td colspan="2">
                             <input type="button"
                                    value="Incluir"
-                                   class="bt-03" style="background: #4F92A7; cursor: hand"
+                                   class="bt-03" style="background: #4F92A7; cursor: hand; width: 30%"
                                    onclick="validarCadastroUsuario()"/>
+                            <input type="button"
+                                   value="Limpar Campos"
+                                   class="bt-03" style="background: #4F92A7; cursor: hand; width: 30%"
+                                   onclick="limparCadastroUsuario()"/>
                         </td>
                     </tr>
                     <tr>

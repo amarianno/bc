@@ -12,7 +12,7 @@ error_reporting(E_ALL);*/
 $smarty = retornaSmarty();
 $usuarioBC = new UsuarioBomCaminhoBC();
 
-$filtro = new FiltroSQL(FiltroSQL::CONECTOR_E, FiltroSQL::OPERADOR_IGUAL, array("email" => $_POST['txtLogin'], "senha" => $_POST['txtSenha'] ));
+$filtro = new FiltroSQL(FiltroSQL::CONECTOR_E, FiltroSQL::OPERADOR_IGUAL, array("email" => $_POST['txtLogin'], "senha" => md5($_POST['txtSenha']) ));
 $users = $usuarioBC->consultar($_SESSION[BANCO_SESSAO], null, $filtro);
 
 if(sizeof($users) > 0) {

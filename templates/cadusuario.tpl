@@ -27,7 +27,7 @@
                             Nome
                         </td>
                         <td>
-                            <input type="text" name="txtNome" id="txtNome" required value="{$nome}" size="50">
+                            <input type="text" name="txtNome" id="txtNome" required value="{$nome}" size="50" onblur="onBlurNome()">
                         </td>
                     </tr>
                     <tr>
@@ -47,11 +47,30 @@
                         </td>
                     </tr>
                     <tr>
+                        <td>
+                            Perfil
+                        </td>
+                        <td>
+                            {html_options options=$perfil_usuarios selected=$selecionado}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
                         <td colspan="2">
                             <input type="button"
                                    value="Incluir"
-                                   class="bt-03" style="background: #4F92A7; cursor: hand"
+                                   class="bt-03" style="background: #4F92A7; cursor: hand; width: 30%"
                                    onclick="validarCadastroUsuario()"/>
+                            <input type="button"
+                                   value="Limpar Campos"
+                                   class="bt-03" style="background: #4F92A7; cursor: hand; width: 30%"
+                                   onclick="limparCadastroUsuario()"/>
                         </td>
                     </tr>
                     <tr>

@@ -383,6 +383,22 @@ function consulta_geral() {
 
 //************************* END CONSULTA GERAL ********************************************
 //************************* BEGIN LOGIN******************************************
+
+function limparCadastroUsuario() {
+    $("#txtNome").val('');
+    $("#hidCod").val('');
+    $("#txtEmail").val('');
+    $("#txtSenha").val('');
+}
+
+function onBlurNome() {
+    if($("#txtNome").val().length == 0) {
+        $("#hidCod").val('');
+        $("#txtEmail").val('');
+        $("#txtSenha").val('');
+    }
+}
+
 function validarCadastroUsuario() {
 
     if($("#txtNome").val() == '') {
@@ -411,8 +427,36 @@ function validarCadastroUsuario() {
     }
 
     $("#myformcaduser").submit();
-
 }
+
+$(function() {
+
+    if ($("#txtNome").size() > 0) {
+        $( "#txtNome" ).autocomplete({
+            source: 'include/autocompleteusuario.php',
+            minLength: 1,
+            highlight: true,
+            autoFocus: false,
+            focus: function (event, ui) {
+                $("#hidCod").val(ui.item.codigo);
+                $("#txtNome").val(ui.item.nome);
+                $("#txtEmail").val(ui.item.email);
+                return false;
+            },
+            select: function (event, ui) {
+                $("#hidCod").val(ui.item.codigo);
+                $("#txtNome").val(ui.item.nome);
+                $("#txtEmail").val(ui.item.email);
+                return false;
+            }
+        }).data("uiAutocomplete")._renderItem = function (ul, item) {
+            return $("<li></li>")
+                .data("item.autocomplete", item)
+                .append("<a><span class='nameEN'>" + item.nome + "</span></a>")
+                .appendTo(ul);
+        };
+    }
+});
 //************************* END LOGIN******************************************
 //************************* BEGIN AUXILIARES******************************************
 function formataData(dataParaFormatar) {
