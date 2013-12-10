@@ -383,25 +383,35 @@ function consulta_geral() {
 
 //************************* END CONSULTA GERAL ********************************************
 //************************* BEGIN LOGIN******************************************
-function logar() {
-    var campos = "txtLogin=" + $("#txtLogin").val();
-    campos += "&pass=" + $("#pass").val();
+function validarCadastroUsuario() {
 
-    $.ajax({
-        type: "POST",
-        url: 'autentica.php',
-        data: campos,
-        success: function (data) {
-               if(data == 'sucess') {
-                   $(window.document.location).attr('href','');
-               } else {
-                   alert('Login ou senha inválidos');
-               }
-        },
-        error: function (xhr, ajaxOptions, thrownError) {
-            alert("Erro: " + xhr.status + " - " + thrownError);
-        }
-    });
+    if($("#txtNome").val() == '') {
+        alert('Nome Obrigatório');
+        $("#txtNome").focus();
+        return false;
+    }
+
+    if($("#txtEmail").val() == '') {
+        alert('Email Obrigatório');
+        $("#txtEmail").focus();
+        return false;
+    }
+
+    if($("#txtSenha").val() == '') {
+        alert('Senha Obrigatório');
+        $("#txtSenha").focus();
+        return false;
+    }
+
+    if($("#txtSenha").val().length < 6) {
+        alert('Senha deve ter mais que 6 caracteres');
+        $("#txtSenha").val('');
+        $("#txtSenha").focus();
+        return false;
+    }
+
+    $("#myformcaduser").submit();
+
 }
 //************************* END LOGIN******************************************
 //************************* BEGIN AUXILIARES******************************************
