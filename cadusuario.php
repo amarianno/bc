@@ -17,15 +17,16 @@ if($op == "cadastrar") {
 
     $usuarioInserir = array();
 
-    if(isset($_POST['hidCod'])) {
+    if(!empty($_POST['hidCod'])) {
         $usuarioInserir['codigo'] = $_POST['hidCod'];
     }
 
     $usuarioInserir['nome'] = $_POST['txtNome'];
     $usuarioInserir['email'] = $_POST['txtEmail'];
     $usuarioInserir['senha'] = md5( $_POST['txtSenha'] );
+    $usuarioInserir['perfil'] = $_POST['selPerfil'];
 
-    if(isset($_POST['hidCod'])) {
+    if(!empty($_POST['hidCod'])) {
         $filtro = new FiltroSQL(FiltroSQL::CONECTOR_E, FiltroSQL::OPERADOR_IGUAL, array("codigo" => $_POST['hidCod']));
         $usuarioBC->alterar($_SESSION[BANCO_SESSAO], $usuarioInserir, $filtro);
         $smarty->assign("message", "Alterado com sucesso");
@@ -50,9 +51,5 @@ if($op == "cadastrar") {
     $smarty->assign("email", "");
     $smarty->assign("senha", "");
     $smarty->assign("message", "");
-    $smarty->assign('perfil_usuarios', array(
-                                            1 => 'Cadastrador',
-                                            2 => 'Administrador'));
-    $smarty->assign('selecionado', 1);
     $smarty->display("cadusuario.tpl");
 }

@@ -7,6 +7,7 @@ class UsuarioBomCaminho extends Persistivel {
     public $nome;
     public $email;
     public $senha;
+    public $perfil;
 
 
     public function getChavePrimaria() {

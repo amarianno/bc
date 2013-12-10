@@ -43,6 +43,8 @@ class UsuarioBomCaminhoDAOPersistivel extends DAOPersistivel {
                     $user->nome = $valor;
                 } else if (strcasecmp($campo, "email") == 0) {
                     $user->email = $valor;
+                } else if (strcasecmp($campo, "perfil") == 0) {
+                    $user->perfil = $valor;
                 }
             }
             $resultsets[] = $user;

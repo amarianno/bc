@@ -6,6 +6,7 @@
         $(function() {
             $( "#tabs" ).tabs();
         });
+        document.getElementById('selPerfil').value = 1
     </script>
     <br><br><br><br>
     <div id="tabs">
@@ -51,7 +52,10 @@
                             Perfil
                         </td>
                         <td>
-                            {html_options options=$perfil_usuarios selected=$selecionado}
+                            <select name="selPerfil" id="selPerfil">
+                                <option label="Cadastrador" value="1" selected="true">Cadastrador</option>
+                                <option label="Administrador" value="2" >Administrador</option>
+                            </select>
                         </td>
                     </tr>
                     <tr>
@@ -82,5 +86,4 @@
             </form>
         </div>
     </div>
-
 </div>

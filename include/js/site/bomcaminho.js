@@ -389,6 +389,7 @@ function limparCadastroUsuario() {
     $("#hidCod").val('');
     $("#txtEmail").val('');
     $("#txtSenha").val('');
+    document.getElementById('selPerfil').value = 1
 }
 
 function onBlurNome() {
@@ -396,6 +397,7 @@ function onBlurNome() {
         $("#hidCod").val('');
         $("#txtEmail").val('');
         $("#txtSenha").val('');
+        document.getElementById('selPerfil').value = 1
     }
 }
 
@@ -441,12 +443,14 @@ $(function() {
                 $("#hidCod").val(ui.item.codigo);
                 $("#txtNome").val(ui.item.nome);
                 $("#txtEmail").val(ui.item.email);
+                document.getElementById('selPerfil').value = ui.item.perfil
                 return false;
             },
             select: function (event, ui) {
                 $("#hidCod").val(ui.item.codigo);
                 $("#txtNome").val(ui.item.nome);
                 $("#txtEmail").val(ui.item.email);
+                document.getElementById('selPerfil').value = ui.item.perfil
                 return false;
             }
         }).data("uiAutocomplete")._renderItem = function (ul, item) {

@@ -5,7 +5,7 @@
     //Corrige o termo buscado substituindo os \' por ' (comando stripslashes) e depois substitui ' por '' para o select no mysql
     $term = str_replace("'", "''", stripslashes(trim(strip_tags($_GET['term']))));
 
-    $sql = "SELECT codigo, nome, email
+    $sql = "SELECT codigo, nome, email, perfil
 	        FROM usuario
             WHERE nome LIKE '%" . $term . "%'
             ORDER BY nome ASC
@@ -20,7 +20,8 @@
         $data[] = array(
             'codigo' => $row['codigo'],
             'nome' => $row['nome'],
-            'email' => $row['email']
+            'email' => $row['email'],
+            'perfil' => $row['perfil']
         );
     }
 

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-12-10 11:34:42
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-10 13:20:10
          compiled from "templates/cadusuario.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:38118232852a702e679efd7-13163327%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1bb874bde4fe66f9c00f59a4027806e7794e1627' => 
     array (
       0 => 'templates/cadusuario.tpl',
-      1 => 1386682480,
+      1 => 1386688799,
       2 => 'file',
     ),
   ),
@@ -38,6 +38,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         $(function() {
             $( "#tabs" ).tabs();
         });
+        document.getElementById('selPerfil').value = 1
     </script>
     <br><br><br><br>
     <div id="tabs">
@@ -84,6 +85,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     </tr>
                     <tr>
                         <td>
+                            Perfil
+                        </td>
+                        <td>
+                            <select name="selPerfil" id="selPerfil">
+                                <option label="Cadastrador" value="1" selected="true">Cadastrador</option>
+                                <option label="Administrador" value="2" >Administrador</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             <br>
                         </td>
                         <td>
@@ -112,6 +124,5 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             </form>
         </div>
     </div>
-
 </div>
 <?php }} ?>
