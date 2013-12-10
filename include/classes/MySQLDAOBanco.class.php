@@ -43,7 +43,7 @@ class MySQLDAOBanco extends DAOBanco {
                 }
             }
         } catch (Exception $e) {
-            BuscartasEmailSender::enviarEmailException($e, "MySQLDAOBanco.class.php");
+            $e->getMessage();
         }
 
         return true;
@@ -66,7 +66,7 @@ class MySQLDAOBanco extends DAOBanco {
                 return true;
             }
         } catch (Exception $e) {
-            BuscartasEmailSender::enviarEmailException($e, "MySQLDAOBanco.class.php");
+            $e->getMessage();
         }
     }
 
@@ -79,7 +79,7 @@ class MySQLDAOBanco extends DAOBanco {
                 return true;
             }
         } catch (Exception $e) {
-            BuscartasEmailSender::enviarEmailException($e, "MySQLDAOBanco.class.php");
+            $e->getMessage();
         }
     }
 
@@ -92,7 +92,7 @@ class MySQLDAOBanco extends DAOBanco {
                 return true;
             }
         } catch (Exception $e) {
-            BuscartasEmailSender::enviarEmailException($e, "MySQLDAOBanco.class.php");
+            $e->getMessage();
         }
     }
 
@@ -114,7 +114,7 @@ class MySQLDAOBanco extends DAOBanco {
                 return $registros;
             }
         } catch (Exception $e) {
-            BuscartasEmailSender::enviarEmailException($e, "MySQLDAOBanco.class.php");
+            $e->getMessage();
         }
     }
 
@@ -137,7 +137,7 @@ class MySQLDAOBanco extends DAOBanco {
                 }
             }
         } catch (Exception $e) {
-            BuscartasEmailSender::enviarEmailException($e, "MySQLDAOBanco.class.php");
+            $e->getMessage();
         }
 
         return false;
@@ -162,7 +162,7 @@ class MySQLDAOBanco extends DAOBanco {
                 }
             }
         } catch (Exception $e) {
-            BuscartasEmailSender::enviarEmailException($e, "MySQLDAOBanco.class.php");
+            $e->getMessage();
         }
 
         return false;
@@ -182,7 +182,7 @@ class MySQLDAOBanco extends DAOBanco {
                 }
             }
         } catch (Exception $e) {
-            BuscartasEmailSender::enviarEmailException($e, "MySQLDAOBanco.class.php");
+            $e->getMessage();
         }
 
         return false;

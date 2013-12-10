@@ -382,6 +382,28 @@ function consulta_geral() {
 }
 
 //************************* END CONSULTA GERAL ********************************************
+//************************* BEGIN LOGIN******************************************
+function logar() {
+    var campos = "txtLogin=" + $("#txtLogin").val();
+    campos += "&pass=" + $("#pass").val();
+
+    $.ajax({
+        type: "POST",
+        url: 'autentica.php',
+        data: campos,
+        success: function (data) {
+               if(data == 'sucess') {
+                   $(window.document.location).attr('href','');
+               } else {
+                   alert('Login ou senha inválidos');
+               }
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert("Erro: " + xhr.status + " - " + thrownError);
+        }
+    });
+}
+//************************* END LOGIN******************************************
 //************************* BEGIN AUXILIARES******************************************
 function formataData(dataParaFormatar) {
     var dataSplit = dataParaFormatar.split("-");

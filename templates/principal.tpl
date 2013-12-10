@@ -1,3 +1,5 @@
+{include file="header.tpl" title="Cadastro de Famílias Assistidas pelo Bom Caminho" }
+{include file="menu_top.tpl"}
 <div class="centerDiv">
 
     <script>
