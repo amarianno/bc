@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-05 11:34:11
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-10 08:44:14
          compiled from "templates/principal.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:183143587251800215cdbeb6-97691475%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9498380aff9ec2291ebe746945e4167a401df325' => 
     array (
       0 => 'templates/principal.tpl',
-      1 => 1383658385,
+      1 => 1386672249,
       2 => 'file',
     ),
   ),
@@ -17,19 +17,29 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1.13',
   'unifunc' => 'content_51800215d02972_46267793',
+  'variables' => 
+  array (
+    'nome' => 0,
+  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_51800215d02972_46267793')) {function content_51800215d02972_46267793($_smarty_tpl) {?><div class="centerDiv">
+<?php if ($_valid && !is_callable('content_51800215d02972_46267793')) {function content_51800215d02972_46267793($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>"Cadastro de Famílias Assistidas pelo Bom Caminho"), 0);?>
+
+<?php echo $_smarty_tpl->getSubTemplate ("menu_top.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<div class="centerDiv">
 
     <script>
         $(function() {
             $( "#tabs" ).tabs();
         });
     </script>
-
+    <br><br>
     <table style="width: 100%" border="0">
         <tr>
             <td>
+                Olá, <?php echo $_smarty_tpl->tpl_vars['nome']->value;?>
+
                 <br>
             </td>
         </tr>

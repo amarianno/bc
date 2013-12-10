@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-12-10 08:15:37
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-10 08:43:42
          compiled from "templates/login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:964755378513f20a2006d81-52733366%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '81a0270564c79ee7a1c4f40d2a5e8bcfac7e3570' => 
     array (
       0 => 'templates/login.tpl',
-      1 => 1386670506,
+      1 => 1386672220,
       2 => 'file',
     ),
   ),
@@ -30,6 +30,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             $( "#tabs" ).tabs();
         });
     </script>
+    <br><br><br><br>
     <div id="tabs">
         <ul>
             <li><a href="#tabs-1">Login</a></li>

@@ -24,9 +24,13 @@ class UsuarioBomCaminhoDAOPersistivel extends DAOPersistivel {
 
     public function consultar(DAOBanco $banco, $campos, FiltroSQL $filtro = null) {
         $resultados = parent::consultar($banco, $campos, $filtro, "nome ASC");
-        return $this->criaObjetos($resultados);
-    }
+        if(!is_null($resultados)) {
+            return $this->criaObjetos($resultados);
+        } else {
+            return array();
+        }
 
+    }
 
     public function criaObjetos($resultados) {
         $resultsets = array();

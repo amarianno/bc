@@ -140,7 +140,6 @@
             if ($banco->abreConexao() == true) {
                 $res = $banco->consultar($sql);
                 $banco->fechaConexao();
-
                 return $res;
             } else {
                 return false;

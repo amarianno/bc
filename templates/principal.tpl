@@ -7,10 +7,11 @@
             $( "#tabs" ).tabs();
         });
     </script>
-
+    <br><br>
     <table style="width: 100%" border="0">
         <tr>
             <td>
+                Olá, {$nome}
                 <br>
             </td>
         </tr>

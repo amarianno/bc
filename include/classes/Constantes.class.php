@@ -9,4 +9,5 @@ final class Constantes {
     const SET_PAGINA_INICIAL = 5;
     const PWD = "pwd";
     const COMP_FAMILIAR = 'composicao_familiar';
+    const USUARIO_SESSION = 'usuario';
 }
