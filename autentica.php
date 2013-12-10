@@ -9,12 +9,10 @@ require_once ('include/retornaconexao.inc.php');
 ini_set('display_startup_erros',1);
 error_reporting(E_ALL);*/
 
-$login = $_POST['txtLogin'];
-$senha = $_POST['txtSenha'];
 $smarty = retornaSmarty();
 $usuarioBC = new UsuarioBomCaminhoBC();
 
-$filtro = new FiltroSQL(FiltroSQL::CONECTOR_E, FiltroSQL::OPERADOR_IGUAL, array("email" => $login, "senha" => $senha ));
+$filtro = new FiltroSQL(FiltroSQL::CONECTOR_E, FiltroSQL::OPERADOR_IGUAL, array("email" => $_POST['txtLogin'], "senha" => $_POST['txtSenha'] ));
 $users = $usuarioBC->consultar($_SESSION[BANCO_SESSAO], null, $filtro);
 
 if(sizeof($users) > 0) {

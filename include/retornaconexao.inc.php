@@ -10,3 +10,9 @@
         $banco = $fabrica->criaInstanciaBanco(BANCO_DE_DADOS, HOST_BANCO, LOGIN_BANCO, SENHA_BANCO, NOME_BANCO);
         $_SESSION[BANCO_SESSAO] = $banco;
     }
+
+    //chrcando a sessão do usuario
+    if (!isset($_SESSION[Constantes::USUARIO_SESSION])) {
+        header('Location: index.php');
+    }
+

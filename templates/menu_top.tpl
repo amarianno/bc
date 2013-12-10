@@ -9,7 +9,7 @@
                 <div class="imgBC">
                     <img src="include/img/logobc.png" >
                 </div>
-                <!--
+
                 <li>
                     <a href="#">CADASTROS <img src="include/img/icon/arrowdown-icon.png"/></a>
                     <ul>
@@ -63,7 +63,7 @@
                         </li>
                     </ul>
                 </li>
-                -->
+
             </ul>
         </div>
     </div>

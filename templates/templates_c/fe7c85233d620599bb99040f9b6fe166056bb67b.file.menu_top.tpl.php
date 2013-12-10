@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-11-13 10:44:28
+<?php /* Smarty version Smarty-3.1.13, created on 2013-12-10 09:37:27
          compiled from "templates/menu_top.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:247225102513e393fbc0d59-06006437%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fe7c85233d620599bb99040f9b6fe166056bb67b' => 
     array (
       0 => 'templates/menu_top.tpl',
-      1 => 1384346571,
+      1 => 1386675437,
       2 => 'file',
     ),
   ),
@@ -30,7 +30,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <div class="imgBC">
                     <img src="include/img/logobc.png" >
                 </div>
-                <!--
+
                 <li>
                     <a href="#">CADASTROS <img src="include/img/icon/arrowdown-icon.png"/></a>
                     <ul>
@@ -84,7 +84,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         </li>
                     </ul>
                 </li>
-                -->
+
             </ul>
         </div>
     </div>
