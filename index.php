@@ -4,4 +4,11 @@
     require_once('include/retornasmarty.inc.php');
 
     $smarty = retornaSmarty();
-    $smarty->display("index.tpl");
+
+    //chrcando a sessão do usuario
+    //if (isset($_SESSION[Constantes::USUARIO_SESSION])) {
+        $smarty->display("principal.tpl");
+    //}
+
+
+    //$smarty->display("index.tpl");

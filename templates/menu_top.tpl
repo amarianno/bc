@@ -6,64 +6,37 @@
         <div class="wrapper">
             <!-- Navigation -->
             <ul id="nav" class="sf-menu">
-                <div class="imgBC">
-                    <img src="include/img/logobc.png" >
-                </div>
 
-                <li>
-                    <a href="#">CADASTROS <img src="include/img/icon/arrowdown-icon.png"/></a>
-                    <ul>
-                        <li>
-                            <a href="atestados.php"><span>Atestado</span></a>
-                        </li>
-                        <li>
-                            <a href="empregadoCAD.php"><span>Empregado</span></a>
-                        </li>
-                        <li>
-                            <a href="cid.php"><span>CID</span></a>
-                        </li>
-                        <li>
-                            <a href="procedimento.php"><span>Procedimento e Exames</span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">CONSULTAS <img src="include/img/icon/arrowdown-icon.png"/></a>
-                    <ul>
-                        <li>
-                            <a href="consulta_matricula.php"><span>Atestados do Funcionário pela Matrícula</span></a>
-                        </li>
-                        <li>
-                            <a href="cid_por_matricula.php"><span>CID Por Matrícula</span></a>
-                        </li>
-                        <li>
-                            <a href="empregadoCAD.php?op=listar"><span>Matrícula Por Nome</span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">RELATÓRIOS <img src="include/img/icon/arrowdown-icon.png"/></a>
-                    <ul>
-                        <li>
-                            <a href="relatorio_cid_mensal.php"><span>CID Por Período</span></a>
-                        </li>
-                        <li>
-                            <a href="relatorio_dia_atestados.php"><span>Atestados cadastrados por data</span></a>
-                        </li>
-                        <li>
-                            <a href="relatorio_atest_homol_periodo.php"><span>Atestados Homologados por Período</span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">GUIA <img src="include/img/icon/arrowdown-icon.png"/></a>
-                    <ul>
-                        <li>
-                            <a href="guias_cassi.php"><span>Cassi</span></a>
-                        </li>
-                    </ul>
-                </li>
-
+                <table>
+                    <tr>
+                        <td>
+                            <div class="imgBC">
+                                <img src="include/img/logobc.png" >
+                            </div>
+                        </td>
+                        <td>
+                            <b>
+                                <a href="index.php">
+                                    Inserir Família
+                                </a>
+                            </b>
+                        </td>
+                        <td>
+                            <b>
+                                <a href="consulta_geral.php">
+                                    Consulta Geral
+                                </a>
+                            </b>
+                        </td>
+                        <td>
+                            <b>
+                                <a href="cadusuario.php">
+                                    Inserir Usuário
+                                </a>
+                            </b>
+                        </td>
+                    </tr>
+                </table>
             </ul>
         </div>
     </div>

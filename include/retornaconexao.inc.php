@@ -12,7 +12,7 @@
     }
 
     //chrcando a sessão do usuario
-    if (!isset($_SESSION[Constantes::USUARIO_SESSION])) {
+   /* if (!isset($_SESSION[Constantes::USUARIO_SESSION])) {
         header('Location: index.php');
-    }
+    }*/
 

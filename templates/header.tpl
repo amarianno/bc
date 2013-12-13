@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="include/css/template.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="include/css/superfish.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="include/css/jquery-ui.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="include/css/buttons.css" type="text/css" media="screen"/>
 
     <script src="include/js/jquery-1.9.1.js"></script>
     <script src="include/js/jquery-ui.js"></script>
